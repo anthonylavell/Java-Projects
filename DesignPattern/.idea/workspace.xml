@@ -1,0 +1,826 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e744bb71-506d-4fff-b9d6-852e96928cc5" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/prototype/car_prototype/BasicCar.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/prototype/car_prototype/CarClient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="42" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/prototype/car_prototype/Nano.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/prototype/car_prototype/Ford.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="5" lean-forward="true" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/prototype/car_prototype/BasicCarCache.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="49" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/prototype/shapes_prototype/Shape.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="28" column="5" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="28" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/prototype/shapes_prototype/ShapeCache.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/academy/learnprogramming/builder/fast_food/concrete_class/ChickenBurger.java" />
+        <option value="$PROJECT_DIR$/src/academy/learnprogramming/builder/fast_food/concrete_class/VegBurger.java" />
+        <option value="$PROJECT_DIR$/src/academy/learnprogramming/builder/fast_food/concrete_class/Pepsi.java" />
+        <option value="$PROJECT_DIR$/src/academy/learnprogramming/builder/fast_food/concrete_class/Coke.java" />
+        <option value="$PROJECT_DIR$/src/academy/learnprogramming/builder/fast_food/builder_interface/Packing.java" />
+        <option value="$PROJECT_DIR$/src/academy/learnprogramming/builder/fast_food/concrete_class/Wrapper.java" />
+        <option value="$PROJECT_DIR$/src/academy/learnprogramming/builder/fast_food/concrete_class/Bottle.java" />
+        <option value="$PROJECT_DIR$/src/academy/learnprogramming/builder/fast_food/builder_interface/MealBuilder.java" />
+        <option value="$PROJECT_DIR$/src/academy/learnprogramming/builder/fast_food/concrete_class/NonVegMealBuilder.java" />
+        <option value="$PROJECT_DIR$/src/academy/learnprogramming/builder/fast_food/concrete_class/VegMealBuilder.java" />
+        <option value="$PROJECT_DIR$/src/academy/learnprogramming/builder/fast_food/director/Director.java" />
+        <option value="$PROJECT_DIR$/src/academy/learnprogramming/builder/fast_food/director/MealDirector.java" />
+        <option value="$PROJECT_DIR$/src/academy/learnprogramming/builder/fast_food/client/FastFoodClient.java" />
+        <option value="$PROJECT_DIR$/src/academy/learnprogramming/builder/fast_food/builder_interface/Items.java" />
+        <option value="$PROJECT_DIR$/src/academy/learnprogramming/builder/fast_food/builder_interface/Burger.java" />
+        <option value="$PROJECT_DIR$/src/academy/learnprogramming/builder/fast_food/builder_interface/ColdDrink.java" />
+        <option value="$PROJECT_DIR$/src/academy/learnprogramming/builder/fast_food/product/Meal.java" />
+        <option value="$PROJECT_DIR$/src/academy/learnprogramming/builder/restaurant/fast_food/concrete_class/NonVegMealBuilder.java" />
+        <option value="$PROJECT_DIR$/src/academy/learnprogramming/builder/restaurant/fast_food/builder_concrete_class/NonVegMealBuilder.java" />
+        <option value="$PROJECT_DIR$/src/academy/learnprogramming/builder/restaurant/four_star/Item.java" />
+        <option value="$PROJECT_DIR$/src/academy/learnprogramming/builder/restaurant/four_star/abstract_interface/Packing.java" />
+        <option value="$PROJECT_DIR$/src/academy/learnprogramming/builder/restaurant/four_star/abstract_interface/Item.java" />
+        <option value="$PROJECT_DIR$/src/academy/learnprogramming/builder/restaurant/four_star/concrete_class/Plate.java" />
+        <option value="$PROJECT_DIR$/src/academy/learnprogramming/builder/restaurant/four_star/abstract_interface/Steak.java" />
+        <option value="$PROJECT_DIR$/src/academy/learnprogramming/builder/restaurant/four_star/abstract_interface/Glass.java" />
+        <option value="$PROJECT_DIR$/src/academy/learnprogramming/builder/restaurant/four_star/concrete_class/Glass.java" />
+        <option value="$PROJECT_DIR$/src/academy/learnprogramming/builder/restaurant/four_star/abstract_interface/Wine.java" />
+        <option value="$PROJECT_DIR$/src/academy/learnprogramming/builder/restaurant/four_star/builder_concrete_class/TBoneSteak.java" />
+        <option value="$PROJECT_DIR$/src/academy/learnprogramming/builder/restaurant/four_star/builder_concrete_class/PorterHouseSteak.java" />
+        <option value="$PROJECT_DIR$/src/academy/learnprogramming/builder/restaurant/four_star/builder_concrete_class/RedWine.java" />
+        <option value="$PROJECT_DIR$/src/academy/learnprogramming/builder/restaurant/four_star/builder_concrete_class/WhiteWine.java" />
+        <option value="$PROJECT_DIR$/src/academy/learnprogramming/builder/restaurant/four_star/builder_interface/FourStarMealBuilder.java" />
+        <option value="$PROJECT_DIR$/src/academy/learnprogramming/builder/restaurant/four_star/builder_concrete_class/TBoneSteakBuilder.java" />
+        <option value="$PROJECT_DIR$/src/academy/learnprogramming/builder/restaurant/four_star/builder_concrete_class/PorterHouseSteakBuilder.java" />
+        <option value="$PROJECT_DIR$/src/academy/learnprogramming/builder/restaurant/four_star/fourStarDirector/FourStarDirector.java" />
+        <option value="$PROJECT_DIR$/src/academy/learnprogramming/builder/restaurant/fast_food/client/FastFoodClient.java" />
+        <option value="$PROJECT_DIR$/src/academy/learnprogramming/builder/restaurant/four_star/product/SteakHouse.java" />
+        <option value="$PROJECT_DIR$/src/academy/learnprogramming/builder/restaurant/four_star/four_star_client/FourStarClient.java" />
+        <option value="$PROJECT_DIR$/src/academy/learnprogramming/prototype/Shape.java" />
+        <option value="$PROJECT_DIR$/src/academy/learnprogramming/prototype/Rectangle.java" />
+        <option value="$PROJECT_DIR$/src/academy/learnprogramming/prototype/Circle.java" />
+        <option value="$PROJECT_DIR$/src/academy/learnprogramming/prototype/Square.java" />
+        <option value="$PROJECT_DIR$/src/academy/learnprogramming/prototype/ShapeCache.java" />
+        <option value="$PROJECT_DIR$/src/academy/learnprogramming/prototype/Client.java" />
+        <option value="$PROJECT_DIR$/src/academy/learnprogramming/prototype/shapes_prototype/abstract_prototype/Shape.java" />
+        <option value="$PROJECT_DIR$/src/academy/learnprogramming/prototype/shapes_prototype/concrete_prototype/Square.java" />
+        <option value="$PROJECT_DIR$/src/academy/learnprogramming/prototype/car_prototype/BasicCarCache.java" />
+        <option value="$PROJECT_DIR$/src/academy/learnprogramming/prototype/car_prototype/BasicCar.java" />
+        <option value="$PROJECT_DIR$/src/academy/learnprogramming/prototype/car_prototype/Nano.java" />
+        <option value="$PROJECT_DIR$/src/academy/learnprogramming/prototype/car_prototype/Ford.java" />
+        <option value="$PROJECT_DIR$/src/academy/learnprogramming/prototype/car_prototype/CarClient.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="941" />
+    <option name="y" value="96" />
+    <option name="width" value="691" />
+    <option name="height" value="764" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="DesignPattern" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DesignPattern" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DesignPattern" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DesignPattern" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DesignPattern" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DesignPattern" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="academy" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DesignPattern" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DesignPattern" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="academy" type="462c0819:PsiDirectoryNode" />
+              <item name="learnprogramming" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DesignPattern" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DesignPattern" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="academy" type="462c0819:PsiDirectoryNode" />
+              <item name="learnprogramming" type="462c0819:PsiDirectoryNode" />
+              <item name="prototype" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DesignPattern" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DesignPattern" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="academy" type="462c0819:PsiDirectoryNode" />
+              <item name="learnprogramming" type="462c0819:PsiDirectoryNode" />
+              <item name="prototype" type="462c0819:PsiDirectoryNode" />
+              <item name="car_prototype" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DesignPattern" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DesignPattern" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="academy" type="462c0819:PsiDirectoryNode" />
+              <item name="learnprogramming" type="462c0819:PsiDirectoryNode" />
+              <item name="prototype" type="462c0819:PsiDirectoryNode" />
+              <item name="shapes_prototype" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/academy/learnprogramming/abstract_method" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="academy.learnprogramming.singleton.bill_pugh" />
+      <recent name="academy.learnprogramming.singleton.eager_evaluation" />
+      <recent name="academy.learnprogramming.singleton.double_checked_locking" />
+      <recent name="academy.learnprogramming.singleton.Synchronized_method" />
+      <recent name="academy.learnprogramming.factory_method.concrete_creator" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Anthony\Documents\Programming\Code\Java-Projects\DesignPattern\src\academy\learnprogramming\abstract_method" />
+      <recent name="C:\Users\Anthony\Documents\Programming\Code\Java-Projects\DesignPattern\src\academy\learnprogramming\factory_method\static_method_creator" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.CarClient">
+    <configuration name="CarClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="academy.learnprogramming.prototype.car_prototype.CarClient" />
+      <module name="DesignPattern" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="academy.learnprogramming.prototype.car_prototype.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="academy.learnprogramming.prototype.shapes_prototype.shapes_client.Client" />
+      <module name="DesignPattern" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="academy.learnprogramming.prototype.shapes_prototype.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FastFoodClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="academy.learnprogramming.builder.restaurant.fast_food.client.FastFoodClient" />
+      <module name="DesignPattern" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="academy.learnprogramming.builder.restaurant.fast_food.client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FourStarClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="academy.learnprogramming.builder.restaurant.four_star.four_star_client.FourStarClient" />
+      <module name="DesignPattern" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="academy.learnprogramming.builder.restaurant.four_star.four_star_client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VehicleClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="academy.learnprogramming.builder.vehicle.client.VehicleClient" />
+      <module name="DesignPattern" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="academy.learnprogramming.builder.vehicle.client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.CarClient" />
+        <item itemvalue="Application.Client" />
+        <item itemvalue="Application.FourStarClient" />
+        <item itemvalue="Application.FastFoodClient" />
+        <item itemvalue="Application.VehicleClient" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e744bb71-506d-4fff-b9d6-852e96928cc5" name="Default Changelist" comment="" />
+      <created>1559875589856</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1559875589856</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" weight="0.33755943" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Learn" order="6" />
+      <window_info id="Favorites" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="0" weight="0.26740506" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.2795699" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.3252688" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="right" id="Coverage" order="0" side_tool="true" visible="true" weight="0.32969153" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Maven" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33755943" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Learn" order="6" />
+      <window_info id="Favorites" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="0" weight="0.26740506" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.2795699" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.38291138" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="right" id="Coverage" order="0" side_tool="true" visible="true" weight="0.32969153" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Maven" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+    </layout-to-restore>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/DesignPattern$Client__1_.ic" NAME="Client (1) Coverage Results" MODIFIED="1560883525169" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>academy.learnprogramming.factory_method.concrete_creator.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/DesignPattern$FourStarClient.ic" NAME="FourStarClient Coverage Results" MODIFIED="1561175582020" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>academy.learnprogramming.builder.restaurant.four_star.four_star_client.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/DesignPattern$Client.ic" NAME="Client Coverage Results" MODIFIED="1560884974572" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>academy.learnprogramming.factory_method.shapes.*</FILTER>
+    </SUITE>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/singleton/bill_pugh/Driver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/singleton/bill_pugh/TestDrive.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="55" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/builder/vehicle/concrete_class/MotorCycle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/builder/restaurant/fast_food/concrete_class/Coke.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/builder/restaurant/fast_food/concrete_class/Bottle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/builder/vehicle/director/Director.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/builder/vehicle/client/VehicleClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="54" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/builder/restaurant/fast_food/concrete_class/Pepsi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/builder/restaurant/fast_food/builder_concrete_class/VegMealBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/builder/vehicle/product/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/builder/vehicle/concrete_class/Car.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/builder/vehicle/builder_interface/BuilderInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="25" lean-forward="true" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/builder/restaurant/fast_food/abstract_interface/Packing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/builder/restaurant/fast_food/abstract_interface/Items.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/builder/restaurant/fast_food/abstract_interface/Burger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/builder/restaurant/four_star/abstract_interface/Item.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/builder/restaurant/four_star/abstract_interface/Packing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="18" lean-forward="true" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/builder/restaurant/fast_food/product/Meal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/builder/restaurant/fast_food/concrete_class/ChickenBurger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/builder/restaurant/fast_food/abstract_interface/ColdDrink.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/builder/restaurant/four_star/concrete_class/Glass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="28" lean-forward="true" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/builder/restaurant/fast_food/concrete_class/VegBurger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="18" lean-forward="true" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/builder/restaurant/fast_food/concrete_class/Wrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" lean-forward="true" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/builder/restaurant/four_star/concrete_class/PorterHouseSteak.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/builder/restaurant/four_star/concrete_class/RedWine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/builder/restaurant/four_star/concrete_class/WhiteWine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/builder/restaurant/four_star/concrete_class/TBoneSteak.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/builder/restaurant/four_star/concrete_class/Plate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="79" selection-start-line="2" selection-start-column="79" selection-end-line="2" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/builder/restaurant/four_star/abstract_interface/Steak.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="75" selection-start-line="2" selection-start-column="75" selection-end-line="2" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/builder/restaurant/four_star/abstract_interface/Wine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="75" selection-start-line="2" selection-start-column="75" selection-end-line="2" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/builder/restaurant/fast_food/builder_interface/MealBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/builder/restaurant/fast_food/builder_concrete_class/NonVegMealBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/builder/restaurant/four_star/builder_concrete_class/TBoneSteakBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="40" lean-forward="true" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/builder/restaurant/fast_food/director/MealDirector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/builder/restaurant/four_star/builder_interface/FourStarMealBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="23" lean-forward="true" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/builder/restaurant/four_star/four_star_client/FourStarClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/builder/restaurant/four_star/product/SteakHouse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="42" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/builder/restaurant/four_star/builder_concrete_class/PorterHouseSteakBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/builder/restaurant/fast_food/client/FastFoodClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/builder/restaurant/four_star/fourStarDirector/FourStarDirector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/prototype/shapes_prototype/shapes_client/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/prototype/shapes_prototype/Circle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/prototype/shapes_prototype/Square.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/prototype/shapes_prototype/ShapeCache.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/prototype/shapes_prototype/Shape.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="28" column="5" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="28" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/prototype/car_prototype/BasicCar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/prototype/shapes_prototype/Rectangle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/prototype/car_prototype/Ford.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="5" lean-forward="true" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/prototype/car_prototype/Nano.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/prototype/car_prototype/CarClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="42" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/academy/learnprogramming/prototype/car_prototype/BasicCarCache.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="49" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>javafx-swt</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>11</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>12</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

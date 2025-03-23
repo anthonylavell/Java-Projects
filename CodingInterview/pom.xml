@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>groupId</groupId>
+    <artifactId>CodingInterview</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <!-- properties> -->
+    <properties>
+        <logback.version>1.2.3</logback.version>
+        <java.version>12</java.version>
+        <annotation-api.version>1.3.2</annotation-api.version>
+        <lombok-version>1.18.8</lombok-version>
+        <maven-war.version>3.2.2</maven-war.version>
+        <marven-cargo.version>1.7.4</marven-cargo.version>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+    </properties>
+
+    <dependencies>
+
+        <!--Logging -->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${logback.version}</version>
+        </dependency>
+
+        <!-- Annotation API -->
+        <dependency>
+            <groupId>javax.annotation</groupId>
+            <artifactId>javax.annotation-api</artifactId>
+            <version>${annotation-api.version}</version>
+        </dependency>
+
+        <!-- Lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>edge</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/libs/lombok.jar</systemPath>
+            <optional>true</optional>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.7.0</version>
+                <configuration>
+                    <target>${java.version}</target>
+                    <source>${java.version}</source>
+                    <release>${java.version}</release>
+                </configuration>
+
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>${maven-war.version}</version>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.cargo</groupId>
+                <artifactId>cargo-maven2-plugin</artifactId>
+                <version>${marven-cargo.version}</version>
+                <configuration>
+                    <container>
+                        <containerId>tomcat9x</containerId>
+                        <type>embedded</type>
+                    </container>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+
+
+</project>

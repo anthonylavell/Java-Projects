@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0b14d97c-54e3-4f7e-86ed-8b630d57414a" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="JUnit4 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>displayN</find>
+    </findStrings>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1QQcGIi38hCNOYr11WMr92jxPP5" />
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="create.test.in.the.same.root" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/libs" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="sorting.insertion" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="linked_list.doubly" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Anthony\Documents\Programming\Code\Java-Projects\CodingInterview\libs" />
+      <recent name="C:\Users\Anthony\Documents\Programming\Code\Java-Projects\CodingInterview" />
+      <recent name="C:\Users\Anthony\Documents\Programming\Code\Java-Projects\CodingInterview\src\main\resources" />
+      <recent name="C:\Users\Anthony\Documents\Programming\Code\Java-Projects\CodingInterview\src" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.SumClient">
+    <configuration name="CircularlyLinkedListSortedClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="challenges.amazon_challenge.client.CircularlyLinkedListSortedClient" />
+      <module name="CodingInterview" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="challenges.amazon_challenge.client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InsetionClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="challenges.practice_challenge.sorting.insertion.InsetionClient" />
+      <module name="CodingInterview" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="challenges.practice_challenge.sorting.insertion.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SumClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="challenges.amazon_challenge.client.SumClient" />
+      <module name="CodingInterview" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="challenges.amazon_challenge.client.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InsertionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CodingInterview" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="challenges.practice_challenge.sorting.insertion.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="challenges.practice_challenge.sorting.insertion" />
+      <option name="MAIN_CLASS_NAME" value="challenges.practice_challenge.sorting.insertion.InsertionTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InsertionTest.sort" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CodingInterview" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="challenges.practice_challenge.sorting.insertion.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="challenges.practice_challenge.sorting.insertion" />
+      <option name="MAIN_CLASS_NAME" value="challenges.practice_challenge.sorting.insertion.InsertionTest" />
+      <option name="METHOD_NAME" value="sort" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.SumClient" />
+        <item itemvalue="Application.CircularlyLinkedListSortedClient" />
+        <item itemvalue="Application.InsetionClient" />
+        <item itemvalue="JUnit.InsertionTest.sort" />
+        <item itemvalue="JUnit.InsertionTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0b14d97c-54e3-4f7e-86ed-8b630d57414a" name="Default Changelist" comment="" />
+      <created>1561248286475</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1561248286475</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="InsertionTest - 2019.07.11 at 12h 32m 46s.xml">
+      <configuration name="InsertionTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InsertionTest - 2019.07.11 at 12h 33m 05s.xml">
+      <configuration name="InsertionTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InsertionTest - 2019.07.11 at 12h 33m 27s.xml">
+      <configuration name="InsertionTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InsertionTest - 2019.07.11 at 12h 33m 56s.xml">
+      <configuration name="InsertionTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="InsertionTest_sort - 2019.07.11 at 13h 04m 37s.xml">
+      <configuration name="InsertionTest.sort" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/challenges/practice_challenge/coding_challenge/HTMLTags.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/challenges/practice_challenge/coding_challenge/STR.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/challenges/practice_challenge/binary_tree/BinaryTree.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/challenges/practice_challenge/recursive/string/STR.java</url>
+          <line>4</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/challenges/practice_challenge/sorting/bubble/BubbleSort.java</url>
+          <line>4</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/challenges/practice_challenge/sorting/insertion/Insertion.java</url>
+          <line>4</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>javafx-swt</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>11</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>CodingInterview</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>12</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+  <component name="mavenExecuteGoalHistory">
+    <option value="$PROJECT_DIR$" />
+    <option value="clean install" />
+  </component>
+</project>
