@@ -29,12 +29,12 @@ public class BalancedBinaryTree {
             return 0;
         }
 
-        int leftNode = findTreeLevel(root.left);
-        int rightNode = findTreeLevel(root.right);
+        int leftNde = findTreeLevel(root.left);
+        int rightNde = findTreeLevel(root.right);
 
-        if((leftNode < 0 || rightNode < 0) ||  Math.abs(leftNode-rightNode) > 1){
+        if((leftNde < 0 || rightNde < 0) ||  Math.abs(leftNde-rightNde) > 1){
             return -1;
         }
-        return (Math.max(leftNode,rightNode)) +1;
+        return (Math.max(leftNde,rightNde)) +1;
     }
 }
