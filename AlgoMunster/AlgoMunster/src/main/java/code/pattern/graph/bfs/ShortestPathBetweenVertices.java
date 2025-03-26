@@ -1,4 +1,4 @@
-package code.pattern.graph;
+package code.pattern.graph.bfs;
 
 import java.util.*;
 
