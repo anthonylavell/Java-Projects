@@ -1,4 +1,4 @@
-package grinder.graph;
+package grinder.graph.dfs;
 
 public class FloodFill {
     public static void main(String[] args) {
