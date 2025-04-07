@@ -1,12 +1,11 @@
 package grinder.random;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
+import java.util.Stack;
 
 public class Solution {
 
     public static void main(String[] args) {
-        JSONObject jsonObject = new JSONObject(getLeetCode());
+        /*JSONObject jsonObject = new JSONObject(getLeetCode());
         JSONObject leetCode = jsonObject.getJSONObject("data");
         int sc = leetCode.getInt("sc");
         int sr = leetCode.getInt("sr");
@@ -20,8 +19,32 @@ public class Solution {
                 image[row][col] = rowVals.getInt(col);
             }
         }
-        floodFill(image,sr,sc,color);
+        floodFill(image,sr,sc,color);*/
 
+        System.out.println(evaluateReversePolishNotation("1 2 + 4 -"));
+
+    }
+
+    public static int evaluateReversePolishNotation(String expression) {
+        int total = 0;
+        Stack<Integer> stack = new Stack<>();
+        for(char ch : expression.toCharArray()){
+            if(ch == '+' || ch == '-'){
+                int num2 = stack.pop();
+                int num = stack.pop();
+                total = (helper(num,num2,ch));
+            }else if (ch != ' ') {
+                total = ch-'0';
+            }else {
+                continue;
+            }
+            stack.add(total);
+        }
+        return stack.pop(); // Placeholder return statement
+    }
+
+    private static int helper(int num, int num2, char sign){
+        return ((sign == '+') ? (num + num2) : (num - num2));
     }
 
     public static int[][] floodFill(int[][] image, int sr, int sc, int color) {
