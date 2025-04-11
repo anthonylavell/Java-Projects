@@ -1,13 +1,13 @@
 package grinder.dp;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class LongestIncreasingSubsequence {
     public static void main(String[] args) {
         int [] numbers = {1,3,6,7,9,4,10,5,6};
         System.out.println(lengthOfLIS(numbers));
+        Set<Integer> obstacles = new TreeSet<>();
+
     }
     public static int lengthOfLIS(int[] nums) {
         int n = nums.length;
