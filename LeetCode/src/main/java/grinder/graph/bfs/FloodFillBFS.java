@@ -12,26 +12,25 @@ public class FloodFillBFS {
     }
 
     public static int[][] floodFill(int[][] image, int sr, int sc, int color) {
+        int[][] dir = {{1,0},{-1,0},{0,-1},{0,1}};
         int orgColor = image[sr][sc];
-        int[][] dir = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
-        Deque<int[]> deque = new ArrayDeque<>();
-        deque.add(new int[]{sr, sc});
+        Deque<int[]> visited = new ArrayDeque<>();
+        visited.add(new int[] {sr,sc});
         image[sr][sc] = color;
-        while (!deque.isEmpty()) {
-            int size = deque.size();
-            int[] nodes = deque.pop();
-            while (size-- > 0) {
-                for (int index = 0; index < dir.length; index++) {
-                    int row = nodes[0] + dir[index][0];
-                    int col = nodes[1] + dir[index][1];
-                    if (row < 0 || row >= image.length || col < 0 || col >= image[row].length || image[row][col] != orgColor || orgColor== color) {
-                        continue;
+        while (!visited.isEmpty()){
+            int size = visited.size();
+            while (size-- > 0){
+                int [] tempArray = visited.pop();
+                for (int [] row : dir ){
+                    int x = tempArray[0] + row[0];
+                    int y = tempArray[1] + row[1];
+                    if(orgColor!=color && x >= 0 && x < image.length && y >= 0 && y < image[0].length && image[x][y] == orgColor){
+                        visited.add(new int[] {x,y});
+                        image[x][y] = color;
                     }
-                    deque.add(new int[]{row, col});
-                    image[row][col] = color;
                 }
             }
         }
-            return image;
+        return image;
     }
 }

@@ -1,7 +1,5 @@
 package grinder.random;
 
-import java.util.Stack;
-
 public class Solution {
 
     public static void main(String[] args) {
@@ -20,50 +18,8 @@ public class Solution {
             }
         }
         floodFill(image,sr,sc,color);*/
-
-        System.out.println(evaluateReversePolishNotation("1 2 + 4 -"));
-
     }
 
-    public static int evaluateReversePolishNotation(String expression) {
-        int total = 0;
-        Stack<Integer> stack = new Stack<>();
-        for(char ch : expression.toCharArray()){
-            if(ch == '+' || ch == '-'){
-                int num2 = stack.pop();
-                int num = stack.pop();
-                total = (helper(num,num2,ch));
-            }else if (ch != ' ') {
-                total = ch-'0';
-            }else {
-                continue;
-            }
-            stack.add(total);
-        }
-        return stack.pop(); // Placeholder return statement
-    }
-
-    private static int helper(int num, int num2, char sign){
-        return ((sign == '+') ? (num + num2) : (num - num2));
-    }
-
-    public static int[][] floodFill(int[][] image, int sr, int sc, int color) {
-        findAdjacentPixel(image,sr,sc,color,image[sr][sc]);
-        return image;
-    }
-
-    private static void findAdjacentPixel(int[][] image, int sr, int sc, int color,int orgColor){
-        if(sr >= image.length || sr < 0 || sc < 0 || sc >= image[sr].length || image[sr][sc] == color){
-            return;
-        }
-        if(image[sr][sc] == orgColor){
-            image[sr][sc] = color;
-            findAdjacentPixel(image,sr+1,sc,color,orgColor);
-            findAdjacentPixel(image,sr-1,sc,color,orgColor);
-            findAdjacentPixel(image,sr,sc+1,color,orgColor);
-            findAdjacentPixel(image,sr,sc-1,color,orgColor);
-        }
-}
 
     private static String getLeetCode(){
         return  """
