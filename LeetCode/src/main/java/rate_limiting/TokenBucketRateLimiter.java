@@ -3,9 +3,11 @@
  */
 package rate_limiting;
 
-import java.time.LocalTime;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * A simple thread-safe token-bucket rate limiter.
+ */
 public class TokenBucketRateLimiter {
 
     private final long capacity;
@@ -15,6 +17,12 @@ public class TokenBucketRateLimiter {
     private double availableTokens;
     private long lastRefillTimestamp;
 
+    /**
+     * @param capacity         maximum number of tokens in the bucket (burst size)
+     * @param refillTokens     number of tokens to add each interval
+     * @param refillPeriod     length of the interval
+     * @param refillPeriodUnit unit of time for the interval
+     */
     public TokenBucketRateLimiter(long capacity,
                                   long refillTokens,
                                   long refillPeriod,
@@ -29,6 +37,8 @@ public class TokenBucketRateLimiter {
         this.availableTokens = capacity;
         this.lastRefillTimestamp = System.currentTimeMillis();
     }
+
+    // Example of usage
     public static void main(String[] args) throws InterruptedException {
         // capacity=5, refill 5 tokens every 1 second => steady rate of 5 req/s
         TokenBucketRateLimiter limiter = new TokenBucketRateLimiter(5, 5, 1, TimeUnit.SECONDS);
@@ -41,17 +51,25 @@ public class TokenBucketRateLimiter {
             // sleep 200ms between requests
             Thread.sleep(200);
         }
-
     }
 
     /**
-     * Returns the current number of available tokens (for monitoring / testing).
+     * Attempts to acquire a single token. Returns {@code true} if successful,
+     * or {@code false} if no tokens are available.
      */
-    public synchronized double getAvailableTokens() {
+    public synchronized boolean tryAcquire() {
         refill();
-        return availableTokens;
+        if (availableTokens >= 1) {
+            availableTokens -= 1;
+            return true;
+        }
+        return false;
     }
 
+    /**
+     * Refills the bucket with tokens based on how much time has passed
+     * since the last refill.
+     */
     private void refill() {
         long now = System.currentTimeMillis();
         long delta = now - lastRefillTimestamp;
@@ -70,25 +88,10 @@ public class TokenBucketRateLimiter {
     }
 
     /**
-     * Attempts to acquire a single token. Returns {@code true} if successful,
-     * or {@code false} if no tokens are available.
+     * Returns the current number of available tokens (for monitoring / testing).
      */
-    public synchronized boolean tryAcquire() {
+    public synchronized double getAvailableTokens() {
         refill();
-        if (availableTokens >= 1) {
-            availableTokens -= 1;
-            return true;
-        }
-        return false;
-    }
-
-    private static int getTimeDiff(int orgTime){
-        LocalTime time = LocalTime.now();
-        return time.getMinute() -orgTime;
-    }
-
-    private static int getTime(){
-        LocalTime time = LocalTime.now();
-        return time.getMinute();
+        return availableTokens;
     }
 }
