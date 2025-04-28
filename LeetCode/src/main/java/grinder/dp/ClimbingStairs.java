@@ -6,15 +6,13 @@ public class ClimbingStairs {
     }
 
     public static int climbStairs(int n) {
-        int num = 0;
-        int num2 = 1;
-        int subTotal = 0;
-        for(int count = 0; count < n; count++){
-            subTotal = num + num2;
-            num = num2;
-            num2 = subTotal;
+        int [] nums = {0,1};
+        while (n-- >1){
+            int total = nums[0] + nums[1];
+            nums[0] = nums[1];
+            nums[1] = total;
         }
-        return subTotal;
+        return nums[nums.length-1];
     }
 
 
