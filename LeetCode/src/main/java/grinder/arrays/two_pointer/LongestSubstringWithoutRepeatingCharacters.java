@@ -1,6 +1,6 @@
 package grinder.arrays.two_pointer;
 
-import grinder.arrays.multi_Dim.json.LongestSubstringWithoutRepeatingCharJson;
+import grinder.json.LongestSubstringWithoutRepeatingCharJson;
 import org.json.JSONObject;
 
 import java.util.HashMap;

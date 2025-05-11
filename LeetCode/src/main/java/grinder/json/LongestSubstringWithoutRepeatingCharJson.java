@@ -1,4 +1,4 @@
-package grinder.arrays.multi_Dim.json;
+package grinder.json;
 
 public class LongestSubstringWithoutRepeatingCharJson {
     public static void main(String[] args) {
