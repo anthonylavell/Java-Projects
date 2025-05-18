@@ -1,5 +1,7 @@
 package grinder.random;
 
+import java.util.*;
+
 public class Solution {
 
     public static void main(String[] args) {
@@ -19,6 +21,41 @@ public class Solution {
         }
         floodFill(image,sr,sc,color);*/
 
+        int numCourses = 2;
+        int [][]prerequisites = {{0,1}};
+        System.out.println(canFinish(numCourses,prerequisites));
+
+    }
+
+    public static boolean canFinish(int numCourses, int[][] prerequisites) {
+        int popCount = 0;
+        Map<Integer, List<Integer>>graph = new HashMap<>();
+        Map<Integer,Integer>indirect = new HashMap<>();
+        Deque<Integer>queue = new ArrayDeque<>();
+        for (int[]row : prerequisites){
+            graph.computeIfAbsent(row[1], k->new ArrayList<>()).add(row[0]);
+            indirect.putIfAbsent(row[1],0);
+            indirect.put(row[0],(indirect.getOrDefault((row[0]),0))+1);
+        }
+        for (Map.Entry<Integer,Integer> entry:indirect.entrySet()){
+            if (entry.getValue() < 1){
+                queue.add(entry.getKey());
+            }
+        }
+        while (!queue.isEmpty()){
+            int key = queue.pop();
+           popCount++;
+            List<Integer>list = graph.getOrDefault(key,new ArrayList<>());
+            for (Integer current : list ){
+                if (indirect.containsKey(current)){
+                    indirect.put(current,indirect.get(current)-1);
+                    if (indirect.get(current) < 1){
+                        queue.add(current);
+                    }
+                }
+            }
+        }
+        return popCount== graph.size();
     }
 
 
