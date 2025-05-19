@@ -1,3 +1,22 @@
+/*
+Given an integer array nums, return the length of the longest strictly increasing subsequence.
+
+
+
+Example 1:
+
+Input: nums = [10,9,2,5,3,7,101,18]
+Output: 4
+Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4.
+Example 2:
+
+Input: nums = [0,1,0,3,2,3]
+Output: 4
+Example 3:
+
+Input: nums = [7,7,7,7,7,7,7]
+Output: 1
+ */
 package grinder.dp;
 
 import java.util.*;
@@ -10,25 +29,23 @@ public class LongestIncreasingSubsequence {
 
     }
     public static int lengthOfLIS(int[] nums) {
-        int n = nums.length;
-        int[] dp = new int[n + 1];
-        Arrays.fill(dp, Integer.MAX_VALUE);
-        dp[0] = Integer.MIN_VALUE;
-
-        for (int i = 0; i < n; i++) {
-            int j = upperBound(dp, nums[i]);
-            if (dp[j - 1] < nums[i] && nums[i] < dp[j]) {
-                dp[j] = nums[i];
+        int total = 0;
+        int maxVal = Integer.MAX_VALUE;
+        int [] dp = new int[nums.length+1];
+        Arrays.fill(dp,maxVal);
+        dp[0] = -maxVal;
+        for (int num : nums) {
+            for (int col = 1; col < dp.length; col++) {
+                if (dp[col - 1] < num && num < dp[col]) {
+                    dp[col] = num;
+                }
             }
         }
-
-        int ans = 0;
-        for (int i = 0; i <= n; i++) {
-            if (dp[i] < Integer.MAX_VALUE) {
-                ans = i;
-            }
+        for (int num : dp){
+            if (num < maxVal && num != -maxVal)
+                total++;
         }
-        return ans;
+        return total;
     }
 
     public static int upperBound(int[] dp, int target) {

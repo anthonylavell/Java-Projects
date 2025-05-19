@@ -1,6 +1,6 @@
 package grinder.dp.bottom_up;
 
-public class MinimumPathSum {
+public class MinimumPathSumRedo {
     public static void main(String[] args) {
         //int[][] grid = { {1,3,1},{1,5,1},{4,2,1} };
         int[][] grid = { {1,2,3},{4,5,6} };

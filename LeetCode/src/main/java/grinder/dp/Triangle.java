@@ -51,17 +51,15 @@ public class Triangle {
     }
 
     public static int minimumTotal(List<List<Integer>> triangle) {
-        int[] keepTrack = new int[triangle.get(triangle.size()-1).size()];
-        for(int row = triangle.size()-1; row >= 0; row--){
-            for (int col = 0; col < triangle.get(row).size();col++){
-                if(row == triangle.size()-1){
-                    keepTrack[col]=triangle.get(row).get(col);
-                    continue;
-                }
-                keepTrack[col]=(Math.min(keepTrack[col],keepTrack[col+1]))+triangle.get(row).get(col);
+        int triLen = triangle.size()-1;
+        int[]dp = new int[triangle.get(triLen).size()];
+        for (int row = triLen; row>=0;row--){
+            for (int col = 0; col < triangle.get(row).size(); col++){
+                int num = triangle.get(row).get(col);
+                dp[col] = (row==triLen) ? num : num + Math.min(dp[col],dp[col+1]);
             }
         }
-        return keepTrack[0];
+        return dp[0];
     }
 
 }
