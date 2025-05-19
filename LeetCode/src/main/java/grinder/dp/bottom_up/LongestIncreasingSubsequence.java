@@ -41,9 +41,9 @@ public class LongestIncreasingSubsequence {
                 }
             }
         }
-        for (int num : dp){
-            if (num < maxVal && num != -maxVal)
-                total++;
+        for (int index = 0; index < dp.length; index++){
+            if (dp[index] < maxVal )
+                total = index;
         }
         return total;
     }
