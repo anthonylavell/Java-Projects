@@ -17,7 +17,7 @@ Example 3:
 Input: nums = [7,7,7,7,7,7,7]
 Output: 1
  */
-package grinder.dp;
+package grinder.dp.bottom_up;
 
 import java.util.*;
 

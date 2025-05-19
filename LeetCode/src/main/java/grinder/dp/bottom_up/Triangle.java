@@ -26,7 +26,7 @@ triangle[0].length == 1
 triangle[i].length == triangle[i - 1].length + 1
 -104 <= triangle[i][j] <= 104
  */
-package grinder.dp;
+package grinder.dp.bottom_up;
 
 import java.util.Arrays;
 import java.util.List;

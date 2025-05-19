@@ -1,4 +1,4 @@
-package grinder.dp;
+package grinder.dp.bottom_up;
 
 public class MinimumPathSum {
     public static void main(String[] args) {
