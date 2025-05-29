@@ -1,5 +1,7 @@
 package grinder.random;
 
+import java.util.PriorityQueue;
+
 public class Solution {
 
     public static void main(String[] args) {
@@ -18,6 +20,28 @@ public class Solution {
             }
         }
         floodFill(image,sr,sc,color);*/
+
+        int [] A = {-1, -3};
+        System.out.println(number(A));
+    }
+
+    public static int number(int[]A){
+        PriorityQueue<Integer> queue = new PriorityQueue<>();
+        for (int num : A) {
+            if (num > 0) {
+                queue.add(num);
+            }
+        }
+        int prev = -1;
+       for (int index = 0; !queue.isEmpty(); index++){
+           int num = queue.poll();
+            if(index > 0 && num - prev > 1){
+                return prev +1;
+            }
+            prev = num;
+        }
+
+        return (prev != -1) ? prev + 1 : 1;
     }
 
     private static String getLeetCode(){
