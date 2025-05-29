@@ -18,7 +18,6 @@ public class MinimumOperationsLetterY {
     public int minimumOperationsToWriteY(int[][] grid) {
         int n = grid.length;
         int[][] group = new int[n][n]; // 1 for Y, 0 for non-Y
-        // Mark Y-shape cells
         for (int i = 0; i <= n / 2; i++) {
             group[i][i] = 1; // Left diagonal
             group[i][n - 1 - i] = 1; // Right diagonal
@@ -27,7 +26,6 @@ public class MinimumOperationsLetterY {
             group[i][n / 2] = 1; // Vertical line from center to bottom
         }
 
-        // Count frequency of values in Y and non-Y regions
         int[][] yFreq = new int[3][1];
         int[][] nonYFreq = new int[3][1];
         int yCount = 0, nonYCount = 0;
@@ -45,7 +43,6 @@ public class MinimumOperationsLetterY {
             }
         }
 
-        // Try all combinations of distinct values for Y and non-Y regions
         int minOps = Integer.MAX_VALUE;
         for (int yVal = 0; yVal < 3; yVal++) {
             for (int nonYVal = 0; nonYVal < 3; nonYVal++) {
