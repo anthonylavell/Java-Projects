@@ -14,22 +14,28 @@ public class ValidPalindrome {
         //isPalindrome(str);
         System.out.println(str.charAt(4));
         str = str.replaceAll("[^a-zA-Z0-9]","").toLowerCase();
+        String str2 = "A man, a plan, a canal: Panama";
+        System.out.println(isPalindrome(str2));
 
     }
 
     public static boolean isPalindrome(String str) {
         str = str.toLowerCase();
-        String tempStr = "";
+        char[] temp = new char [str.length()];
+        int count = 0;
         for(char ch : str.toCharArray()){
             if(Character.isLetterOrDigit(ch)){
-                tempStr+=ch;
+                temp[count++]=ch;
             }
         }
-        int length = tempStr.length();
-        for(int index = 0; index < length/2; index++){
-            if(tempStr.charAt(index) != tempStr.charAt((length-1)-index)){
+        int left = 0;
+        int right = count-1;
+       while (left < right){
+            if(temp[left] != temp[right]){
                 return false;
             }
+            left++;
+            right--;
         }
         return true;
     }
