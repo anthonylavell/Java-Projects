@@ -1,4 +1,4 @@
-package grinder.strings;
+package comp_p.hubspot;
 
 public class MaximumRepeatingSubstring {
     public static void main(String[] args) {

@@ -1,9 +1,8 @@
 package grinder.strings;
 
+import comp_p.hubspot.MaximumRepeatingSubstring;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class MaximumRepeatingSubstringTest {
 

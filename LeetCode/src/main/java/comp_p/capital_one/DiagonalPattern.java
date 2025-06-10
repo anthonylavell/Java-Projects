@@ -11,7 +11,7 @@ The diagonal segment:
 • May go toward any possible diagonal direction
  */
 
-package capital_one;
+package comp_p.capital_one;
 
 public class DiagonalPattern {
     public static void main(String[] args) {

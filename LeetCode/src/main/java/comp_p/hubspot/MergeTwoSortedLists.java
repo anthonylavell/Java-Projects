@@ -1,4 +1,4 @@
-package grinder.sort.mergesort;
+package comp_p.hubspot;
 
 import ds.node.singly_node.CreateListNode;
 import ds.node.singly_node.ListNode;

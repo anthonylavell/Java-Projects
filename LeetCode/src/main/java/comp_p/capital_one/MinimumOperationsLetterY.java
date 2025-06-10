@@ -12,7 +12,7 @@ Return *the ****minimum**** number of operations needed to write the letter Y on
 one operation you can change the value at any cell to* 0*,* 1*,* *or* 2*.*
  */
 
-package capital_one;
+package comp_p.capital_one;
 
 public class MinimumOperationsLetterY {
     public int minimumOperationsToWriteY(int[][] grid) {

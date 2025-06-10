@@ -1,4 +1,4 @@
-package grinder.sort.mergesort;
+package comp_p.hubspot;
 
 import java.util.Arrays;
 

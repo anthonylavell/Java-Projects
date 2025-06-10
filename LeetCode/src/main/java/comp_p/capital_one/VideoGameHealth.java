@@ -5,7 +5,7 @@
  * @param deltas        array of health changes per level
  * @return the final health after applying all deltas
  */
-package capital_one;
+package comp_p.capital_one;
 
 public class VideoGameHealth {
     public static void main(String[] args) {

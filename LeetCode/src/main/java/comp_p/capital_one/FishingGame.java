@@ -17,7 +17,7 @@ current bait was used three times or if it is not strictly smaller than the
 largest remaining fish. When you run out of bait, return the number of caught fish.
  */
 
-package capital_one;
+package comp_p.capital_one;
 
 import java.util.Arrays;
 
