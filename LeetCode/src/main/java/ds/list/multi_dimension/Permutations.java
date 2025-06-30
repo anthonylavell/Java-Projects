@@ -1,29 +1,31 @@
 package ds.list.multi_dimension;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Permutations {
-    public List<List<Integer>> permute(int[] nums) {
+    public static void main(String[] args) {
+        int[] nums = {1,2,3};
+        permute(nums);
+
+    }
+    public static List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> sum =new ArrayList<>();
-        Arrays.sort(nums);
-        backTrack(sum,new ArrayList<>(),nums,0);
+        backTrack(sum,nums,new ArrayList<>());
         return sum;
     }
 
-    private void backTrack(List<List<Integer>> sum, List<Integer> list, int[] nums, int index){
+    private static void backTrack(List<List<Integer>> sum, int[] nums, List<Integer> list){
         if(list.size() == nums.length){
             sum.add(new ArrayList<>(list));
-        }else {
-            for(int i = index; i < nums.length; i++){
-                if(list.contains(nums[i])){
-                    continue;
-                }
-                list.add(nums[i]);
-                backTrack(sum,list,nums,index);
-                list.remove(list.size()-1);
-            }
+            return;
+        }
+        for(int num : nums){
+            if(list.contains(num))
+                continue;
+            list.add(num);
+            backTrack(sum,nums,list);
+            list.remove(list.size()-1);
         }
     }
 }

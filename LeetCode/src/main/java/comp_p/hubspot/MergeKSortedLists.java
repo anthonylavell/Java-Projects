@@ -1,4 +1,4 @@
-package grinder.sort;
+package comp_p.hubspot;
 
 import ds.node.singly_node.CreateListNode;
 import ds.node.singly_node.ListNode;
@@ -41,18 +41,14 @@ public class MergeKSortedLists {
 
     public static ListNode mergeKLists2(ListNode[] lists) {
         ListNode mergeNode = null;
-        for (int index = 1; index < lists.length; index++){
-            ListNode tempNode = (mergeNode!=null) ? mergeNode : lists[index-1];
-            if (tempNode != null && lists[index] !=null){
-                mergeNode = merge(tempNode,lists[index]);
-            }else if (mergeNode == null && lists[index]==null && tempNode != null){
-                mergeNode = tempNode;
-            }else if (mergeNode == null && lists[index]!=null && tempNode == null){
-                mergeNode = lists[index];
+        for (ListNode list : lists){
+            if (mergeNode == null && list !=null){
+                mergeNode = list;
+            }else if (list != null){
+                mergeNode = merge(mergeNode,list);
             }
-
         }
-        return lists.length ==1 ? lists[0] : mergeNode;
+        return mergeNode;
     }
 
     private static ListNode merge(ListNode node, ListNode node2){

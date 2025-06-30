@@ -55,30 +55,27 @@ public class MergeIntervals {
     }
 
     public static int[][] merge(int[][] intervals) {
+        int [] row = new int[intervals.length];
+        int [] col = new int[intervals.length];
+        for (int index = 0; index < intervals.length; index++){
+            row[index] = intervals[index][0];
+            col[index] = intervals[index][1];
+        }
+        Arrays.sort(row);
+        Arrays.sort(col);
         List<int[]> tempList = new ArrayList<>();
-        int [] start = new int[intervals.length];
-        int [] end = new int[intervals.length];
-        int sTime = 0;
-        int eTime = 0;
-        for(int index = 0; index < intervals.length; index++){
-            start[index] = intervals[index][0];
-            end[index] = intervals[index][1];
-        }
-        Arrays.sort(start);
-        Arrays.sort(end);
-        for (int index = 1; index < start.length; index++){
-            if(end[eTime] < start[index]) {
-                tempList.add(new int[]{start[sTime],end[eTime]});
-                sTime = index;
+        int rowIndx = 0;
+        for (int colIndx = 0; colIndx < col.length; colIndx++){
+            if (colIndx+1 == col.length || col[colIndx] < row[colIndx+1]) {
+                tempList.add(new int [] {row[rowIndx],col[colIndx]});
+                rowIndx = colIndx+1;
             }
-
-            if (index == start.length-1){
-                tempList.add(new int[]{start[sTime],end[index]});
-            }
-            eTime++;
         }
+        int[][] sum = new int[tempList.size()][2];
+        for (int index = 0; index < tempList.size(); index++)
+            sum[index] = tempList.get(index);
 
-        return (intervals.length < 2) ? intervals : tempList.toArray(new int[tempList.size()][2]);
+        return sum;
     }
 
     public static int[][] merge2(int[][] intervals) {

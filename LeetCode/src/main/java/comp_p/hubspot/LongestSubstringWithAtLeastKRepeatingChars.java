@@ -6,35 +6,34 @@ public class LongestSubstringWithAtLeastKRepeatingChars {
     }
 
     public static int longestSubstring(String s, int k) {
-        int maxlen = 0;
-        int len = s.length();
+        int maxLen = 0;
         char[] chars = s.toCharArray();
-
-        for (int row = 0; row < len; row++){
-            if (maxlen>=(len - row)){
+        int charLen = chars.length;
+        for (int row = 0; row < charLen; row++) {
+            if (maxLen >=(charLen-row)){
                 break;
             }
-            if(row>0 && chars[row] == chars[row-1]){
+            if (row > 0 && (chars[row] == chars[row-1])){
                 continue;
             }
-            int [] freq = new int[26];
-            int invalidChar = 0;
-            int windowLen = 0;
-            for (int col = row; col < len; col++){
-                if (freq[chars[col]-'a'] == 0){
-                    invalidChar++;
+            int[] letters = new int[26];
+            int numOfVal = 0;
+            for (int subRow = row; subRow < charLen;subRow++) {
+                char ch = chars[subRow];
+
+                if (letters[ch - 'a']++ == 0) {
+                    numOfVal++;
                 }
-                freq[chars[col]-'a']++;
-                windowLen++;
-                if (freq[chars[col]-'a'] == k){
-                    invalidChar = Math.max(invalidChar-1,0);
+                if (letters[ch - 'a'] == k) {
+                    numOfVal--;
                 }
 
-                if (invalidChar ==0){
-                    maxlen = Math.max(maxlen,windowLen);
+                if (numOfVal == 0) {
+                    int tempLen = (subRow-row) + 1;
+                    maxLen = Math.max(tempLen,maxLen);
                 }
             }
         }
-        return maxlen;
+        return maxLen;
     }
 }
