@@ -8,7 +8,7 @@ public class LCABinaryTree {
     }
     public static TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
 
-        return p;
+        return findLCA(root,p,q);
     }
 
     public static TreeNode findLCA(TreeNode root, TreeNode p, TreeNode q){
