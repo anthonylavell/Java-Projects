@@ -1,6 +1,8 @@
 package grinder.random;
 
+import java.util.HashSet;
 import java.util.PriorityQueue;
+import java.util.Set;
 
 public class Solution {
 
@@ -22,7 +24,28 @@ public class Solution {
         floodFill(image,sr,sc,color);*/
 
         int [] A = {-1, -3};
-        System.out.println(number(A));
+        //System.out.println(number(A));
+        int[]nums = {0,0,-1};
+        System.out.println(longestConsecutive(nums));
+    }
+    public static int longestConsecutive(int[] nums) {
+        int total = 0;
+        Set<Integer>setOfInts = new HashSet<>();
+        for (int num : nums){
+            setOfInts.add(num);
+        }
+        for (int num : setOfInts){
+            if (!setOfInts.contains(num-1)){
+                int currentNum = num;
+                int subTotal = 1;
+                while (setOfInts.contains(currentNum+1)){
+                    currentNum++;
+                    subTotal++;
+                }
+                total = Math.max(total,subTotal);
+            }
+        }
+        return total;
     }
 
     public static int number(int[]A){

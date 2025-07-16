@@ -1,5 +1,8 @@
 package comp_p.hubspot;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class MinimumWindowSubstring {
     public static void main(String[] args) {
         String s = "ADOBECODEBANC";
@@ -9,36 +12,70 @@ public class MinimumWindowSubstring {
     }
 
     public static String minWindow(String s, String t) {
-        String resultStr = "";
-        int[] letterCount = new int[128];
-        int left = 0;
-        int count = 0;
-
-        // 1) Build frequency table for t
-        for (char ch : t.toCharArray()) {
-            letterCount[ch]++;
+        int[]letters = new int[128];
+        for (char ch : t.toCharArray()){
+            letters[ch-'A']++;
         }
-
-        // 2) Expand the right end of the window
-        for (int right = 0; right < s.length(); right++) {
-            // Decrement count for this char; if it was needed (>=0 after decrement), we’ve covered one more
-            if (--letterCount[s.charAt(right)] >= 0) {
-                count++;
+        int leftIdx = 0;
+        int trackChars = 0;
+        String minStr = "";
+        char[] chars = s.toCharArray();
+        for (int rightIdx = 0; rightIdx < chars.length; rightIdx++){
+            char ch = chars[rightIdx];
+            if (--letters[ch-'A'] >=0){
+                trackChars++;
             }
-
-            // 3) Once we’ve covered all of t, try to shrink from the left
-            while (count == t.length()) {
-                // Update result if this window is smaller
-                if (resultStr.isEmpty() || resultStr.length() > (right - left + 1)) {
-                    resultStr = s.substring(left, right + 1);
+            while (trackChars == t.length()){
+                if (minStr.isEmpty() || (minStr.length() > (rightIdx-leftIdx)+1)){
+                    minStr = s.substring(leftIdx,(rightIdx+1));
                 }
-                // Release the left char; if it becomes “needed” again (>0), we lose coverage
-                if (++letterCount[s.charAt(left)] > 0) {
-                    count--;
+                char tempCh = chars[leftIdx++];
+                if (++letters[tempCh-'A'] > 0){
+                    trackChars--;
                 }
-                left++;
             }
         }
-        return resultStr;
+        return minStr;
+    }
+
+    public static String minWindow2(String s, String t) {
+        Map<Character, Integer> mapOfT = new HashMap<>(t.length());
+        String minStr = "";
+        int limit = 0;
+        for (char ch : t.toCharArray()){
+            if (!mapOfT.containsKey(ch)){
+                mapOfT.put(ch,0);
+                limit++;
+            }
+            mapOfT.put(ch, mapOfT.get(ch) +1);
+        }
+
+        char[] chars = s.toCharArray();
+        int trackChar = 0;
+        int[]letters = new int[128];
+        int leftIndx = 0;
+        for (int rightIndx = 0; rightIndx < chars.length; rightIndx++){
+            char ch = chars[rightIndx];
+            if (mapOfT.containsKey(ch)){
+                letters[ch-'A']++;
+                if (letters[ch-'A'] == mapOfT.get(ch)){
+                    trackChar++;
+                }
+                while (trackChar == limit){
+                    String tempStr = s.substring(leftIndx,rightIndx+1);
+                    if(minStr.isEmpty() || (minStr.length() > tempStr.length())){
+                        minStr = s.substring(leftIndx,rightIndx+1);
+                    }
+                    char tempKey = chars[leftIndx++];
+                    if (mapOfT.containsKey(tempKey)){
+                        int letterCount  = --letters[tempKey-'A'];
+                        if (letterCount < mapOfT.get(tempKey))
+                            trackChar--;
+                    }
+                }
+            }
+        }
+        int i = 0;
+        return minStr;
     }
 }

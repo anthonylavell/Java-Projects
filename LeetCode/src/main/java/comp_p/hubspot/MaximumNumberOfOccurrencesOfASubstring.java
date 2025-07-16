@@ -34,8 +34,7 @@ public class MaximumNumberOfOccurrencesOfASubstring {
             int range = ((rightIndx-leftIndx) +1);
             if ( range >= minSize && range <= maxSize ){
                 String key = s.substring(leftIndx,(rightIndx+1));
-                mapOfCount.putIfAbsent(key,0);
-                mapOfCount.put(key,mapOfCount.get(key) +1);
+                mapOfCount.put(key,(mapOfCount.getOrDefault(key,0)) +1);
                 totalCount = Math.max(mapOfCount.get(key),totalCount);
                 char tempCh = chars[leftIndx++];
                 letters[tempCh-'a']--;
@@ -66,8 +65,7 @@ public class MaximumNumberOfOccurrencesOfASubstring {
             int range = ((rightIndx-leftIndx) +1);
             if ( range >= minSize && range <= maxSize ){
                 String key = s.substring(leftIndx,(rightIndx+1));
-                mapOfCount.putIfAbsent(key,0);
-                mapOfCount.put(key,mapOfCount.get(key) +1);
+                mapOfCount.put(key,(mapOfCount.getOrDefault(key,0)) +1);
                 totalCount = Math.max(mapOfCount.get(key),totalCount);
                 decreaseUniqueCharCount(letters,chars,uniqueCharCount,leftIndx);
                 leftIndx++;
