@@ -9,21 +9,19 @@ public class TopKFrequentElements {
         topKFrequent(nums,k);
     }
     public static int[] topKFrequent(int[] nums, int k) {
+        int[] resultArray = new int[k];
+        PriorityQueue<int[]> queue = new PriorityQueue<>((a,b) -> b[0]-a[0]);
         Map<Integer,Integer> mapOfInts = new HashMap<>();
-        PriorityQueue<int[]> queue = new PriorityQueue<>((a,b) -> b[0] - a[0]);
         for (int num : nums){
-            mapOfInts.put(num, mapOfInts.getOrDefault(num,0)+1);
+            mapOfInts.put(num,mapOfInts.getOrDefault(num,0)+1);
         }
-        int[]totalArray = new int[k];
         for (Map.Entry<Integer,Integer> entry : mapOfInts.entrySet()){
-           queue.add(new int[] {entry.getValue(), entry.getKey()});
+            queue.add(new int[]{entry.getValue(),entry.getKey()});
         }
-        int count = 0;
-        while (count < k){
-            int[]temp = queue.poll();
-            totalArray[count++] = temp[1];
+        for (int index = 0; index < k && !queue.isEmpty(); index++){
+            int [] tempArray = queue.poll();
+            resultArray[index] = tempArray[1];
         }
-
-        return totalArray;
+        return resultArray;
     }
 }
