@@ -28,19 +28,6 @@ public class Solution {
         int[]nums = {0,0,-1};
         System.out.println(longestConsecutive(nums));
     }
-    public static boolean isPalindrome(String s) {
-        if (s == null || s.length() <= 1) return true;
-        int i = 0;
-        int j = s.length() - 1;
-        while (i < j) {
-            if (s.charAt(i) != s.charAt(j)) {
-                return false;
-            }
-            i++;
-            j--;
-        }
-        return true;
-    }
 
     public static int longestConsecutive(int[] nums) {
         int total = 0;
