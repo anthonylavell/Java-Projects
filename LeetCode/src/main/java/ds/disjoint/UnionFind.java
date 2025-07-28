@@ -1,4 +1,4 @@
-package ds.dispointset;
+package ds.disjoint;
 
 public class UnionFind {
     private int [] root;

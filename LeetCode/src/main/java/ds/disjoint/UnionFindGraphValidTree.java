@@ -1,4 +1,4 @@
-package ds.dispointset;
+package ds.disjoint;
 
 public class UnionFindGraphValidTree {
     private int [] root;
