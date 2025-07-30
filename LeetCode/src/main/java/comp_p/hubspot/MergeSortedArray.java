@@ -12,9 +12,12 @@ public class MergeSortedArray {
         System.out.println(Arrays.toString(nums1));
 
     }
-    public static void merge(int[] nums1, int leftLen , int[] nums2, int rightLen) {
-        int len = (leftLen--) + (rightLen--);
-        for (int count = len - 1; count >=0; count--)
-            nums1[count] = (rightLen < 0 || leftLen >= 0 && nums1[leftLen] >= nums2[rightLen]) ? nums1[leftLen--] : nums2[rightLen--];
+    public static void merge(int[] nums1, int m , int[] nums2, int n) {
+        m--;
+        n--;
+        for (int index = nums1.length-1; index >=0; index--){
+            nums1[index] =(n < 0) || (m >= 0 && nums1[m] > nums2[n])
+                    ? nums1[m--] : nums2[n--];
+        }
     }
 }

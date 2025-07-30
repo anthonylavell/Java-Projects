@@ -21,21 +21,17 @@ public class ValidPalindrome {
 
     public static boolean isPalindrome(String str) {
         str = str.toLowerCase();
-        char[] temp = new char [str.length()];
-        int count = 0;
-        for(char ch : str.toCharArray()){
-            if(Character.isLetterOrDigit(ch)){
-                temp[count++]=ch;
+        char[] chars = new char[str.length()];
+        int right = -1;
+        for (char ch : str.toCharArray()){
+            if (Character.isLetterOrDigit(ch)){
+                chars[++right] = ch;
             }
         }
-        int left = 0;
-        int right = count-1;
-       while (left < right){
-            if(temp[left] != temp[right]){
+        for (int left = 0; left < right; left++){
+            if (chars[left]!=chars[right--]){
                 return false;
             }
-            left++;
-            right--;
         }
         return true;
     }
