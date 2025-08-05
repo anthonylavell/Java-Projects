@@ -51,10 +51,7 @@ public class StaffingSolution {
          * @return all slots for which the number of staff whose availability fully covers that slot
          *         is less than the slot’s required count.
          */
-        public static List<TimeSlot> findUnderstaffedSlots(
-                List<List<Interval>> staffAvailabilities,
-                List<TimeSlot> slots
-        ) {
+        public static List<TimeSlot> findUnderstaffedSlots(List<List<Interval>> staffAvailabilities,List<TimeSlot> slots) {
             List<TimeSlot> understaffed = new ArrayList<>();
 
             // Precompute staff intervals in minutes
