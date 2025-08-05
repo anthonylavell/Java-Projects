@@ -1,3 +1,7 @@
+/*
+ Given staff availability and time slots, identify the understaffed time periods and return them.
+
+ */
 package comp_p.pay_pal;
 
 import java.util.*;
