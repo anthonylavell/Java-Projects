@@ -11,7 +11,7 @@ this condition: both x y and y z are equal to a given diff Note that elements in
 can be rearranged to form triples to meet the condition. The final output should be an array
 of counts after each query in queries
  */
-package comp_p.capital_one;
+package comp_p.capital_one.karate;
 
 import java.util.ArrayList;
 import java.util.HashMap;
