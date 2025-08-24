@@ -1,53 +1,33 @@
 package comp_p.capital_one.powerday;
 
-import ds.node.doubly_linked.DoublyNode;
-
 public class CustomStack {
-    private DoublyNode head;
-    private DoublyNode tail;
-    int maxSize;
-    int count;
+    private int[]stack;
+    private int eleCount;
     public CustomStack(int maxSize) {
-        this.head = null;
-        this.tail = null;
-        this.maxSize = maxSize;
-        this.count = 0;
+        this.stack = new int[maxSize];
+        this.eleCount = 0;
     }
 
     public void push(int x) {
-        if (count < maxSize) {
-            DoublyNode newNode = new DoublyNode(x);
-            if (head == null) {
-                head = newNode;
-                tail = newNode;
-            } else {
-                newNode.prev = tail;
-                tail.next = newNode;
-                tail = tail.next;
-            }
-            count++;
+        if (eleCount < stack.length) {
+            stack[eleCount] = x;
+            eleCount++;
         }
     }
 
     public int pop() {
-        int tempNum = -1;
-        if (tail!=null){
-            tempNum = tail.val;
-            tail = tail.prev;
-            count--;
+        int val = -1;
+        if (eleCount > 0){
+            val = stack[eleCount-1];
+            eleCount--;
         }
-        if (tail == null){
-            head = null;
-        }
-        return tempNum;
+        return val;
     }
 
     public void increment(int k, int val) {
-        DoublyNode tempNode = head;
-        int len = Math.min(k,count);
-        while (tempNode!=null && len-- > 0){
-                tempNode.val = tempNode.val + val;
-                tempNode = tempNode.next;
+        int len = Math.min(k,eleCount);
+        for (int index = 0; index < len;index++){
+            stack[index]+=val;
         }
     }
 }
