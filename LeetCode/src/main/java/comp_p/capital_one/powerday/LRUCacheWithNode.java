@@ -53,19 +53,20 @@ public class LRUCacheWithNode {
     private DoublyNodeLRU tail;
     public LRUCacheWithNode(int capacity) {
         this.size = capacity;
-        mapOfLRU = new HashMap<>();
-        head = null;
-        tail = null;
+        this.mapOfLRU = new HashMap<>();
+        this.head = null;
+        this.tail = null;
     }
 
     public static void main(String[] args) {
-        LRUCache lru = new LRUCache(2);
+        LRUCacheWithNode lru = new LRUCacheWithNode(2);
         lru.put(1,1);
-        lru.put(1,2);
         lru.put(2,2);
-        System.out.println(lru.get(1));
+        lru.put(1,2);
+        //System.out.println(lru.get(1));
         lru.put(3,3);
         System.out.println(lru.get(2));
+        System.out.println(lru.get(1));
         lru.put(4,4);
         System.out.println(lru.get(1));
         System.out.println(lru.get(3));
@@ -73,46 +74,44 @@ public class LRUCacheWithNode {
     }
 
     public int get(int key) {
-       if (mapOfLRU.containsKey(key) && mapOfLRU.get(key).val != -1){
-           moveToRear(key);
+       if (mapOfLRU.containsKey(key)){
+           moveToRear(mapOfLRU.get(key));
            return mapOfLRU.get(key).val;
        }
         return -1;
     }
 
     public void put(int key, int value) {
+        DoublyNodeLRU newNode;
         if (mapOfLRU.containsKey(key)){
-            mapOfLRU.get(key).val = value;
-            moveToRear(key);
+            newNode = mapOfLRU.get(key);
+            newNode.val = value;
         }else {
-            DoublyNodeLRU newNode = new DoublyNodeLRU(key, value);
-            mapOfLRU.put(key,newNode);
+            newNode = new DoublyNodeLRU(key, value);
+        }
             if (head == null) {
                 head = newNode;
                 tail = head;
-            } else {
-                newNode.prev = tail;
-                tail.next = newNode;
-                tail = tail.next;
             }
-        }
+            moveToRear(newNode);
+            mapOfLRU.putIfAbsent(key, newNode);
         if (mapOfLRU.size() > size) {
-            head.val = -1;
+            mapOfLRU.remove(head.key);
             removeElem();
+
         }
     }
     private void removeElem(){
-        DoublyNodeLRU next =head.next;
-        DoublyNodeLRU pre = head.prev;
+        head = head.next;
+            if (head.prev != null)
+                head.prev = null;
     }
-    private void moveToRear(int key){
-        DoublyNodeLRU current = mapOfLRU.get(key);
+    private void moveToRear(DoublyNodeLRU current){
         if (tail != current) {
-            if (current.prev==null){
-                if (head == current){
-                removeElem();
+            if (current.prev == null){
+                if (head == current) {
+                    removeElem();
                 }
-                current.next = null;
             }else {
                 DoublyNodeLRU prev = current.prev;
                 DoublyNodeLRU next = current.next;
@@ -122,7 +121,7 @@ public class LRUCacheWithNode {
             current.prev = tail;
             tail.next = current;
             tail = tail.next;
+            tail.next = null;
         }
-
     }
 }

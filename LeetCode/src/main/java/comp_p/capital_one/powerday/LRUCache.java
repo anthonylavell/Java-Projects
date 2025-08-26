@@ -54,11 +54,12 @@ public class LRUCache {
     public static void main(String[] args) {
         LRUCache lru = new LRUCache(2);
         lru.put(1,1);
-        lru.put(1,2);
         lru.put(2,2);
-        System.out.println(lru.get(1));
+        lru.put(1,2);
+        //System.out.println(lru.get(1));
         lru.put(3,3);
         System.out.println(lru.get(2));
+        System.out.println(lru.get(1));
         lru.put(4,4);
         System.out.println(lru.get(1));
         System.out.println(lru.get(3));
@@ -76,14 +77,11 @@ public class LRUCache {
     }
 
     public void put(int key, int value) {
-        if (size == 0 && !mapOfLRU.containsKey(key)){
+        if (size == mapOfLRU.size() && !mapOfLRU.containsKey(key)){
             for (Map.Entry<Integer,Integer> map : mapOfLRU.entrySet()){
                 mapOfLRU.remove(map.getKey());
                 break;
             }
-        }
-        if (!mapOfLRU.containsKey(key) && size>0){
-            size--;
         }
         mapOfLRU.remove(key);
         mapOfLRU.put(key,value);
