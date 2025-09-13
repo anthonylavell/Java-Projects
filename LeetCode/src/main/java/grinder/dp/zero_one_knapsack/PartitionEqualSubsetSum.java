@@ -17,45 +17,40 @@ Explanation: The array cannot be partitioned into equal sum subsets.
 
 package grinder.dp.zero_one_knapsack;
 
+import java.util.Arrays;
+
 public class PartitionEqualSubsetSum{
     public static void main(String[] args) {
         int [] nums = {1,5,11,5};
         int [] nums2 = {2,2,1,1};
         int [] nums3 = {2,2,3,5};
         int [] nums4 = {100,4,6};
-        System.out.println(canPartition(nums3));
+        int [] nums5 = {1,2,3,5};
+        int [] nums6 = {1,2,5};
+        System.out.println(canPartition(nums6));
 
 
     }
 
     public static boolean canPartition(int[] nums) {
-        int sum = 0;
-        for (int num:nums){
-            sum+=num;
-        }
+        int sum = Arrays.stream(nums).sum();
         if (sum%2==1){
             return false;
         }
         sum/=2;
-        boolean[][]dp2 = new boolean[nums.length][sum+1];
-        for (int row = 0; row < nums.length; row++){
-            int num = nums[row];
-            if (row==0){
-                dp2[row][0] = true;
-                if(num < dp2[row].length)
-                    dp2[row][num] = true;
-                continue;
-            }
-            int tempRow = row-1;
-            for (int col = 0; col < dp2[row].length; col++){
-                if (col==0){
-                    dp2[row][col] = true;
-                    continue;
+        int size = nums.length;
+        boolean[][]dp = new boolean[size+1][sum+1];
+        dp[0][0] = true;
+        for (int row = 1; row <= size; row++){
+            int num = nums[row-1];
+            for (int col = 0; col <=sum; col++){
+                dp[row][col] = dp[row-1][col];
+                if (col>=num){
+                    dp[row][col] = dp[row-1][col-num] || dp[row][col];
                 }
-                dp2[row][col] = (num > col) ? dp2[tempRow][col] : dp2[tempRow][col] || dp2[tempRow][col-num];
             }
         }
-        return dp2[nums.length-1][sum];
+        return dp[size][sum];
     }
 }
 
