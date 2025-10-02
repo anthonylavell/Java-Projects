@@ -29,52 +29,53 @@ public class DistanceKInBinaryTree {
     }
     public static List<Integer> distanceK(TreeNode root, TreeNode target, int k) {
         List<Integer> list = new ArrayList<>();
-        Map<Integer,List<TreeNode>>graph = createGraph(root);
-        Deque<Integer>deque = new ArrayDeque<>();
-        deque.add(target.val);
-        int [] visited = new int[501];
-        while (!deque.isEmpty() && k-->0) {
+        Map<TreeNode,Deque<TreeNode>>graph = createGraph(root);
+        Deque<TreeNode>deque = new ArrayDeque<>();
+        deque.add(target);
+        boolean [] visit = new boolean[501];
+        while (!deque.isEmpty() && k>0){
             int size = deque.size();
             while (size-- > 0){
-                int key = deque.poll();
-                visited[key]=1;
-                List<TreeNode> tempTree = graph.get(key);
-                for (TreeNode node : tempTree){
-                    if (visited[node.val]==0)
-                        deque.add(node.val);
+                Deque<TreeNode> currentDeque = graph.get(deque.poll());
+                while (!currentDeque.isEmpty()){
+                    TreeNode currentNode = currentDeque.poll();
+                    if (!visit[currentNode.val] ){
+                        deque.add(currentNode);
+                        visit[currentNode.val]=true;
+                    }
                 }
             }
+            k--;
         }
         while (!deque.isEmpty()) {
-            list.add(deque.poll());
+            TreeNode currentNode = deque.poll();
+            list.add(currentNode.val);
         }
         return list;
     }
-    private static   Map<Integer,List<TreeNode>> createGraph(TreeNode root){
+    private static Map<TreeNode,Deque<TreeNode>> createGraph(TreeNode root){
         if (root == null){
             return null;
         }
-        Map<Integer,List<TreeNode>>graph = new HashMap<>();
+        Map<TreeNode,Deque<TreeNode>>graph = new HashMap<>();
         Deque<TreeNode>deque = new ArrayDeque<>();
         deque.add(root);
+        graph.put(root,new ArrayDeque<>());
         while (!deque.isEmpty()){
-                TreeNode currentNode = deque.poll();
-                List<TreeNode> currentList = new ArrayList<>();
-                if (currentNode.left!=null){
-                    graph.put(currentNode.left.val,List.of(currentNode));
-                    currentList.add(currentNode.left);
-                    deque.add(currentNode.left);
-                }
-                if (currentNode.right!=null){
-                    graph.put(currentNode.right.val,List.of(currentNode));
-                    currentList.add(currentNode.right);
-                    deque.add(currentNode.right);
-                }
-                if (graph.containsKey(currentNode.val) &&!graph.get(currentNode.val).isEmpty()){
-                    currentList.add(graph.get(currentNode.val).get(0));
-                }
-                graph.put(currentNode.val,currentList);
+            TreeNode currentNode = deque.poll();
+            if (currentNode.left != null){
+                graph.put(currentNode.left,new ArrayDeque<>());
+                graph.get(currentNode.left).add(currentNode);
+                graph.get(currentNode).add(currentNode.left);
+                deque.add(currentNode.left);
             }
+            if (currentNode.right != null){
+                graph.put(currentNode.right,new ArrayDeque<>());
+                graph.get(currentNode.right).add(currentNode);
+                graph.get(currentNode).add(currentNode.right);
+                deque.add(currentNode.right);
+            }
+        }
         return graph;
     }
 }

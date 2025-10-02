@@ -1,6 +1,8 @@
 package grinder.random;
 
-import java.util.*;
+import java.util.HashSet;
+import java.util.PriorityQueue;
+import java.util.Set;
 
 public class Solution {
 
@@ -25,19 +27,6 @@ public class Solution {
         //System.out.println(number(A));
         int[]nums = {0,0,-1};
         System.out.println(longestConsecutive(nums));
-        longestPalindrome("civilwartestingwhethezzz");
-    }
-
-    public static int longestPalindrome(String s) {
-       int[]numOfChars = new int[127];
-        int total = 0;
-        for (char ch : s.toCharArray()){
-           numOfChars[ch-'A']++;
-            if (numOfChars[ch-'A']%2==0){
-                total+=2;
-            }
-        }
-        return total == s.length() ? total : total+1;
     }
 
     public static int longestConsecutive(int[] nums) {

@@ -1,4 +1,4 @@
-package comp_p.draft_kings;
+package comp_p.draft_kings.challenges.contest;
 
 import lombok.Getter;
 import lombok.Setter;

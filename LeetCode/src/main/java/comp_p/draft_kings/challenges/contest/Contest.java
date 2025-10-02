@@ -1,4 +1,4 @@
-package comp_p.draft_kings;
+package comp_p.draft_kings.challenges.contest;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
