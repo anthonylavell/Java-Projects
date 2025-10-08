@@ -1,10 +1,8 @@
 package comp_p.draft_kings.challenges.discount;
 
 import lombok.Getter;
-import lombok.Setter;
 import lombok.ToString;
 
-@Setter
 @Getter
 @ToString
 public class Discount {

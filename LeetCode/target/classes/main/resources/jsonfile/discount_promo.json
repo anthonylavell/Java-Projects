@@ -1,0 +1,68 @@
+[
+  {
+    "ts_iso": "2025-10-05T10:00:00",
+    "type": "discount_promo",
+    "account_id": "D001",
+    "discount_name": "d1",
+    "currency": "USD",
+    "amount": "200",
+    "source_account_id": "",
+    "destination_account_id": "",
+    "note": "Seed account"
+  },
+  {
+    "ts_iso": "2025-10-05T10:01:00",
+    "type": "discount_promo",
+    "account_id": "D002",
+    "discount_name": "d2",
+    "currency": "USD",
+    "amount": "700",
+    "source_account_id": "",
+    "destination_account_id": "",
+    "note": "Seed account"
+  },
+  {
+    "ts_iso": "2025-10-05T10:02:00",
+    "type": "discount_promo",
+    "account_id": "D003",
+    "discount_name": "d3",
+    "currency": "USD",
+    "amount": "900",
+    "source_account_id": "",
+    "destination_account_id": "",
+    "note": "Seed account"
+  },
+  {
+    "ts_iso": "2025-10-05T10:03:00",
+    "type": "discount_promo",
+    "account_id": "D004",
+    "discount_name": "d4",
+    "currency": "USD",
+    "amount": "2000",
+    "source_account_id": "",
+    "destination_account_id": "",
+    "note": "Seed account"
+  },
+  {
+    "ts_iso": "2025-10-05T10:04:00",
+    "type": "discount_promo",
+    "account_id": "D005",
+    "discount_name": "d5",
+    "currency": "USD",
+    "amount": "1000",
+    "source_account_id": "",
+    "destination_account_id": "",
+    "note": "Seed account"
+  },
+  {
+    "ts_iso": "2025-10-05T10:05:00",
+    "type": "discount_promo",
+    "account_id": "D006",
+    "discount_name": "d6",
+    "currency": "USD",
+    "amount": "400",
+    "source_account_id": "",
+    "destination_account_id": "",
+    "note": "Seed account"
+  }
+]

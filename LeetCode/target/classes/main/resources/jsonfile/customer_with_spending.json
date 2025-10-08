@@ -1,0 +1,79 @@
+[
+  {
+    "ts_iso": "2025-10-05T10:00:00",
+    "type": "spending_account",
+    "account_id": "A001",
+    "customer_name": "Aria Ventures",
+    "currency": "USD",
+    "amount": "21000",
+    "source_account_id": "",
+    "destination_account_id": "",
+    "note": "Seed account"
+  },
+  {
+    "ts_iso": "2025-10-05T10:01:00",
+    "type": "spending_account",
+    "account_id": "A002",
+    "customer_name": "Bolt Logistics",
+    "currency": "USD",
+    "amount": "100",
+    "source_account_id": "",
+    "destination_account_id": "",
+    "note": "Seed account"
+  },
+  {
+    "ts_iso": "2025-10-05T10:02:00",
+    "type": "spending_account",
+    "account_id": "A003",
+    "customer_name": "Cedar Imports",
+    "currency": "USD",
+    "amount": "1000",
+    "source_account_id": "",
+    "destination_account_id": "",
+    "note": "Seed account"
+  },
+  {
+    "ts_iso": "2025-10-05T10:03:00",
+    "type": "spending_account",
+    "account_id": "A004",
+    "customer_name": "Delta Retail",
+    "currency": "USD",
+    "amount": "2000",
+    "source_account_id": "",
+    "destination_account_id": "",
+    "note": "Seed account"
+  },
+  {
+    "ts_iso": "2025-10-05T10:04:00",
+    "type": "spending_account",
+    "account_id": "A005",
+    "customer_name": "Eclipse Media",
+    "currency": "USD",
+    "amount": "10000",
+    "source_account_id": "",
+    "destination_account_id": "",
+    "note": "Seed account"
+  },
+  {
+    "ts_iso": "2025-10-05T10:05:00",
+    "type": "spending_account",
+    "account_id": "A006",
+    "customer_name": "Fjord Tech",
+    "currency": "USD",
+    "amount": "20000",
+    "source_account_id": "",
+    "destination_account_id": "",
+    "note": "Seed account"
+  },
+  {
+    "ts_iso": "2025-10-05T10:05:00",
+    "type": "spending_account",
+    "account_id": "A006",
+    "customer_name": "Anthony Ward",
+    "currency": "USD",
+    "amount": "21000",
+    "source_account_id": "",
+    "destination_account_id": "",
+    "note": "Seed account"
+  }
+]
