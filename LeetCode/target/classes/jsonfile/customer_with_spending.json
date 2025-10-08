@@ -16,7 +16,7 @@
     "account_id": "A002",
     "customer_name": "Bolt Logistics",
     "currency": "USD",
-    "amount": "100",
+    "amount": "19000",
     "source_account_id": "",
     "destination_account_id": "",
     "note": "Seed account"
@@ -27,7 +27,7 @@
     "account_id": "A003",
     "customer_name": "Cedar Imports",
     "currency": "USD",
-    "amount": "1000",
+    "amount": "18000",
     "source_account_id": "",
     "destination_account_id": "",
     "note": "Seed account"
@@ -38,7 +38,7 @@
     "account_id": "A004",
     "customer_name": "Delta Retail",
     "currency": "USD",
-    "amount": "2000",
+    "amount": "17000",
     "source_account_id": "",
     "destination_account_id": "",
     "note": "Seed account"
@@ -49,7 +49,7 @@
     "account_id": "A005",
     "customer_name": "Eclipse Media",
     "currency": "USD",
-    "amount": "10000",
+    "amount": "16000",
     "source_account_id": "",
     "destination_account_id": "",
     "note": "Seed account"
@@ -68,7 +68,7 @@
   {
     "ts_iso": "2025-10-05T10:05:00",
     "type": "spending_account",
-    "account_id": "A006",
+    "account_id": "A007",
     "customer_name": "Anthony Ward",
     "currency": "USD",
     "amount": "21000",
