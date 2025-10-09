@@ -2,6 +2,7 @@ package comp_p.draft_kings.challenges.discount;
 
 import lombok.Getter;
 import lombok.ToString;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +12,7 @@ import java.util.List;
 @ToString
 public class Customer {
     private String name;
-    private double spend;
+    private int spend;
     private List<String>promoCodes;
     private double discountTotal;
 
@@ -19,15 +20,23 @@ public class Customer {
         this.name = name;
         this.spend = spend;
         this.promoCodes = new ArrayList<>();
-        discountTotal =0.0;
+        discountTotal =0;
     }
 
     public void addPromo(String discount){
         promoCodes.add(discount);
     }
 
-    public void addDiscountAmount(double amount){
-         discountTotal += Math.round(amount*100.0)/100.0;
+    public void addDiscountAmount(int amount){
+         discountTotal = amount;
+    }
+    public JSONObject toJson(){
+        JSONObject json = new JSONObject();
+        json.put("Customer Name", name);
+        json.put("Spend Amount", spend);
+        json.put("Discount Amount",discountTotal);
+        json.put("Discount Codes",promoCodes);
+        return json;
     }
 
 }

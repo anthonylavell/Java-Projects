@@ -1,0 +1,10 @@
+{
+	"id": 123,
+	"salaryCap": 90000,
+	"positionsRequired": ["Q", "RB", "WR"],
+	"games": [{
+		"gameId": 343,
+		"homeTeamId": 222,
+		"awayTeamId": 444
+	}]
+}
