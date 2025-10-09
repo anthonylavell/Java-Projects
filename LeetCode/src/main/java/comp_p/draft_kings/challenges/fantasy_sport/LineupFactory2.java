@@ -1,8 +1,8 @@
-package comp_p.draft_kings.challenges.fantacy;
+package comp_p.draft_kings.challenges.fantasy_sport;
 
 import java.util.*;
 
-public class LineupFactory {
+public class LineupFactory2 {
 
     /// <summary>
     /// Determines whether the given lineup is valid
