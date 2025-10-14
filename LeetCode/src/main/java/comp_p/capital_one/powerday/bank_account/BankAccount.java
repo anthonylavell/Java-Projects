@@ -1,12 +1,19 @@
 package comp_p.capital_one.powerday.bank_account;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.*;
+import java.util.stream.Stream;
 
 public class BankAccount {
     private Map<String,Account> mapOfAccounts;
-    public String path = "C:\\Users\\Anthony\\Documents\\Programming\\Code\\Java-Projects\\LeetCode\\src\\main\\resources\\csvfile\\Command_Log__first_30_rows_.csv";
+    //public String path = "C:\\Users\\Anthony\\Documents\\Programming\\Code\\Java-Projects\\LeetCode\\src\\main\\resources\\csvfile\\Command_Log__first_30_rows_.cvs";
+      public String path = "C:\\Users\\Anthony\\Documents\\Programming\\Code\\Java-Projects\\LeetCode\\src\\main\\resources\\jsonfile\\command_log_first30.json";
     public BankAccount(){
         this.mapOfAccounts = new LinkedHashMap<>();
     }
@@ -16,7 +23,38 @@ public class BankAccount {
         bank.sendData(bank.path);
         bank.topAccounts();
     }
-    public void sendData(String filePath){
+    public String sendData(String filePath){
+        if (filePath.endsWith(".json")){
+             jsonData(filePath);
+             return "Success";
+        }else if (filePath.endsWith(".csv")){
+            csvData(filePath);
+            return "Success";
+        }
+        return "File not File";
+    }
+
+    private void jsonData(String path){
+        try {
+            String jsonText = new String (Files.readAllBytes(Paths.get(path)));
+            JSONArray jsonArray = new JSONArray(jsonText);
+            for (int index = 0; index < jsonArray.length(); index++){
+                JSONObject object = jsonArray.optJSONObject(index);
+                String[] accountDetails = Stream.of("ts_iso","type","account_id","account_name",
+                                "currency","amount","source_account_id","destination_account_id","note")
+                                .map(k-> object.optString(k,""))
+                                .toArray(String[]::new);
+                dataExtraction(accountDetails);
+
+
+            }
+        }catch (Exception e){
+            System.out.println("File Not Found");
+            e.printStackTrace();
+        }
+
+    }
+    private void csvData(String filePath){
         try {
            List<String> commands = new ArrayList<>();
             File file = new File(filePath);
