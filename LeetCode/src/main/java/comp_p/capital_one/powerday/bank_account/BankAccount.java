@@ -36,12 +36,13 @@ public class BankAccount {
 
     private void jsonData(String path){
         try {
+            String[] accountTitles = {"ts_iso","type","account_id","account_name",
+                    "currency","amount","source_account_id","destination_account_id","note"};
             String jsonText = new String (Files.readAllBytes(Paths.get(path)));
             JSONArray jsonArray = new JSONArray(jsonText);
             for (int index = 0; index < jsonArray.length(); index++){
                 JSONObject object = jsonArray.optJSONObject(index);
-                String[] accountDetails = Stream.of("ts_iso","type","account_id","account_name",
-                                "currency","amount","source_account_id","destination_account_id","note")
+                String[] accountDetails = Stream.of(accountTitles)
                                 .map(k-> object.optString(k,""))
                                 .toArray(String[]::new);
                 dataExtraction(accountDetails);
