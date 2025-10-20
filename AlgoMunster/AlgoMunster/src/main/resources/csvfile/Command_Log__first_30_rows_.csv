@@ -19,13 +19,13 @@ ts_iso,type,account_id,account_name,currency,amount,source_account_id,destinatio
 2025-10-05T10:22:00,deposit,A008,,USD,27000,,,Initial funding
 2025-10-05T10:23:00,deposit,A009,,USD,45000,,,Initial funding
 2025-10-05T10:24:00,deposit,A010,,USD,30000,,,Initial funding
+2025-10-05T10:25:00,withdraw,A001,,USD,5000,,,Office rent payment
+2025-10-05T10:26:00,withdraw,A002,,USD,10000,,,Payroll batch
+2025-10-05T10:27:00,withdraw,A006,,USD,2000,,,Equipment lease
+2025-10-05T10:28:00,withdraw,A009,,USD,4000,,,Utilities expense
+2025-10-05T10:29:00,withdraw,A010,,USD,3500,,,Marketing campaign
 2025-10-05T10:40:00,transfer,,,USD,12000,A006,A002,Vendor payment / internal xfer
 2025-10-05T10:41:00,transfer,,,USD,8000,A009,A001,Vendor payment / internal xfer
 2025-10-05T10:42:00,transfer,,,USD,5000,A004,A007,Vendor payment / internal xfer
 2025-10-05T10:43:00,transfer,,,USD,7000,A002,A003,Vendor payment / internal xfer
 2025-10-05T10:44:00,transfer,,,USD,4000,A001,A010,Vendor payment / internal xfer
-2025-10-05T10:45:00,transfer,,,USD,6500,A008,A005,Vendor payment / internal xfer
-2025-10-05T10:46:00,transfer,,,USD,3000,A003,A009,Vendor payment / internal xfer
-2025-10-05T10:47:00,transfer,,,USD,4500,A007,A006,Vendor payment / internal xfer
-2025-10-05T10:48:00,transfer,,,USD,5200,A010,A004,Vendor payment / internal xfer
-2025-10-05T10:49:00,transfer,,,USD,2000,A005,A008,Vendor payment / internal xfer
