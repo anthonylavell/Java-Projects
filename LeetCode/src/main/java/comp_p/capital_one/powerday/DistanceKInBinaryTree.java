@@ -14,34 +14,28 @@ Output: []
  */
 package comp_p.capital_one.powerday;
 
-import ds.node.CreateTreeNode;
 import ds.node.singly_node.TreeNode;
 
 import java.util.*;
 
 public class DistanceKInBinaryTree {
-    public static void main(String[] args) {
-        int [] arr = {3,5,1,6,2,0,8};
-        TreeNode root = CreateTreeNode.insert(arr);
-        TreeNode target = CreateTreeNode.insert(arr);
-        int k = 2;
-        distanceK(root,target,k);
-    }
+
     public static List<Integer> distanceK(TreeNode root, TreeNode target, int k) {
         List<Integer> list = new ArrayList<>();
         Map<TreeNode,Deque<TreeNode>>graph = createGraph(root);
         Deque<TreeNode>deque = new ArrayDeque<>();
         deque.add(target);
-        boolean [] visit = new boolean[501];
+        Set<TreeNode> visit = new HashSet<>();
+        visit.add(target);
         while (!deque.isEmpty() && k>0){
             int size = deque.size();
             while (size-- > 0){
                 Deque<TreeNode> currentDeque = graph.get(deque.poll());
                 while (!currentDeque.isEmpty()){
                     TreeNode currentNode = currentDeque.poll();
-                    if (!visit[currentNode.val] ){
+                    if (!visit.contains(currentNode) ){
                         deque.add(currentNode);
-                        visit[currentNode.val]=true;
+                        visit.add(currentNode);
                     }
                 }
             }
@@ -64,7 +58,7 @@ public class DistanceKInBinaryTree {
         while (!deque.isEmpty()){
             TreeNode currentNode = deque.poll();
             if (currentNode.left != null){
-                graph.put(currentNode.left,new ArrayDeque<>());
+                graph.putIfAbsent(currentNode.left,new ArrayDeque<>());
                 graph.get(currentNode.left).add(currentNode);
                 graph.get(currentNode).add(currentNode.left);
                 deque.add(currentNode.left);

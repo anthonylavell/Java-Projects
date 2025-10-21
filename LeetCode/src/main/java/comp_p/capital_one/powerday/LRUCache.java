@@ -51,37 +51,18 @@ public class LRUCache {
         mapOfLRU = new LinkedHashMap<>();
     }
 
-    public static void main(String[] args) {
-        LRUCache lru = new LRUCache(2);
-        lru.put(1,1);
-        lru.put(2,2);
-        lru.put(1,2);
-        //System.out.println(lru.get(1));
-        lru.put(3,3);
-        System.out.println(lru.get(2));
-        System.out.println(lru.get(1));
-        lru.put(4,4);
-        System.out.println(lru.get(1));
-        System.out.println(lru.get(3));
-        System.out.println(lru.get(4));
-    }
-
     public int get(int key) {
-        if (mapOfLRU.containsKey(key)){
-                int [] nums = {key,mapOfLRU.get(key)};
-                mapOfLRU.remove(nums[0]);
-                mapOfLRU.put(nums[0],nums[1]);
-                return nums[1];
-        }
-        return -1;
+        Integer num = mapOfLRU.remove(key);
+        if (num == null)
+            return -1;
+        mapOfLRU.put(key,num);
+        return num;
     }
 
     public void put(int key, int value) {
         if (size == mapOfLRU.size() && !mapOfLRU.containsKey(key)){
-            for (Map.Entry<Integer,Integer> map : mapOfLRU.entrySet()){
-                mapOfLRU.remove(map.getKey());
-                break;
-            }
+            Integer firstKey = mapOfLRU.keySet().iterator().next();
+            mapOfLRU.remove(firstKey);
         }
         mapOfLRU.remove(key);
         mapOfLRU.put(key,value);
