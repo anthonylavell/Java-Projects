@@ -4,15 +4,13 @@ import java.util.*;
 
 public class Anagrams {
    public List<List<String>> groupAnagrams(String[] strs) {
-        Map<String,List<String>> hashMap = new HashMap<>();
-        for(String str : strs){
-            char [] ch = str.toCharArray();
-            Arrays.sort(ch);
-            if(!hashMap.containsKey(String.valueOf(ch))){
-                hashMap.put(String.valueOf(ch), new ArrayList<>());
-            }
-            hashMap.get(String.valueOf(ch)).add(str);
-        }
-        return new ArrayList<>(hashMap.values());
+       Map<String,List<String>>mapOfStrs = new HashMap<>();
+       for (String str : strs){
+           char[]chars = str.toCharArray();
+           Arrays.sort(chars);
+           String key = new String(chars);
+           mapOfStrs.computeIfAbsent(key,k->new ArrayList<>()).add(str);
+       }
+       return new ArrayList<>(mapOfStrs.values());
     }
 }
