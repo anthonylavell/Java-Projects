@@ -2,43 +2,42 @@ package grinder.graph.bfs;
 
 import java.util.*;
 
-public class AccountsMergeBFS {
+public class AccountsMerge {
     public static List<List<String>> accountsMerge(List<List<String>> accounts) {
-        Map<String,String> emailToName = new HashMap<>();
-        Map<String,List<String>> graphs = new HashMap<>();
-        List<List<String>> mergeAccounts = new ArrayList<>();
-        for (List<String> account : accounts){
-            String name = account.get(0);
+        Map<String,List<String>>graph = new HashMap<>();
+        Map<String,String>emailToNames = new HashMap<>();
+        List<List<String>>mergeAccounts = new ArrayList<>();
+        for (List<String>account : accounts) {
             String firstEmail = account.get(1);
-            emailToName.putIfAbsent(firstEmail,name);
-            graphs.putIfAbsent(firstEmail,new ArrayList<>());
-            for (int index = 2; index < account.size(); index++){
+            String name = account.get(0);
+            graph.putIfAbsent(firstEmail, new ArrayList<>());
+            emailToNames.put(firstEmail, name);
+            for (int index = 2; index < account.size(); index++) {
                 String currentEmail = account.get(index);
-                emailToName.putIfAbsent(currentEmail,name);
-                graphs.putIfAbsent(currentEmail,new ArrayList<>());
-                graphs.get(firstEmail).add(currentEmail);
-                graphs.get(currentEmail).add(firstEmail);
+                emailToNames.put(currentEmail, name);
+                graph.get(firstEmail).add(currentEmail);
+                graph.computeIfAbsent(currentEmail, k -> new ArrayList<>()).add(firstEmail);
             }
         }
+        Deque<String>deque =new ArrayDeque<>();
         Set<String>visited = new HashSet<>();
-        Deque<String>deque = new ArrayDeque<>();
-        for (String key : graphs.keySet()){
-            List<String>list = new ArrayList<>();
-            if (visited.add(key)){
-                list.add(key);
-                deque.add(key);
+        for (Map.Entry<String,List<String>>entry:graph.entrySet()){
+            if(visited.add(entry.getKey())) {
+                deque.add(entry.getKey());
+                List<String>list = new ArrayList<>();
+                list.add(entry.getKey());
                 while (!deque.isEmpty()) {
-                    List<String>emails = graphs.get(deque.poll());
+                    String key = deque.poll();
+                    List<String> emails = graph.get(key);
                     for (String email : emails) {
-                        if (!visited.contains(email)){
+                        if (visited.add(email)) {
                             list.add(email);
                             deque.add(email);
-                            visited.add(email);
                         }
                     }
                 }
                 Collections.sort(list);
-                list.add(0,emailToName.get(key));
+                list.add(0,emailToNames.get(entry.getKey()));
                 mergeAccounts.add(list);
             }
         }

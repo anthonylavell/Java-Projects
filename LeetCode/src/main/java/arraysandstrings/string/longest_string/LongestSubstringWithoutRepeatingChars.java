@@ -1,5 +1,8 @@
 package arraysandstrings.string.longest_string;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class LongestSubstringWithoutRepeatingChars {
     public static void main(String[] args) {
        // String str = "pickoutthelongestsubstring";
@@ -16,36 +19,23 @@ public class LongestSubstringWithoutRepeatingChars {
         System.out.println("String one total: "+lengthOfLongestSubstring(str));
         System.out.println("String two total: "+lengthOfLongestSubstring(str2));
         System.out.println("String three total: "+lengthOfLongestSubstring(str3));*/
-        System.out.println("String three total: "+lengthOfLongestSubstring2(str3));
+        System.out.println("String three total: "+lengthOfLongestSubstring(str3));
     }
     public static int lengthOfLongestSubstring(String str) {
+        Map<Character,Integer> mapOfChars = new HashMap<>();
+        int left = 0;
         int total = 0;
-        String tempStr = "";
-        for(int i = 0; i <str.length(); i++){
-            int chIndex = tempStr.indexOf(str.charAt(i));
-            if(chIndex > -1){
-                total = (total < tempStr.length()) ? tempStr.length() : total;
-                tempStr = tempStr.substring(chIndex+1);
-            }
-            tempStr += str.charAt(i);
-        }
-        return  (total < tempStr.length()) ? tempStr.length() : total;
-    }
-
-    public static int lengthOfLongestSubstring2(String str) {
-        int total = 0;
-        int startIndex = 0;
-        for (int i = 1; i < str.length(); i++) {
-            char ch = str.charAt(i);
-            int chIndex = str.substring(0,i).indexOf(ch,startIndex);
-            if (chIndex > -1) {
-                total = (total < (i-startIndex)) ? (i-startIndex) : total;
-                startIndex = chIndex+1;
+        for (int right = 0; right < str.length(); right++){
+            char key = str.charAt(right);
+            mapOfChars.putIfAbsent(key,0);
+            mapOfChars.put(key,mapOfChars.get(key)+1);
+            while (mapOfChars.get(key) > 1){
+                total = Math.max(total,(right-left));
+                char tmp = str.charAt(left++);
+                mapOfChars.put(tmp,mapOfChars.get(tmp)-1);
             }
         }
-        int len = (str.length()-startIndex);
-        return (total < len) ? len : total;
-
+        return Math.max(total,(str.length()-left));
     }
 
 }

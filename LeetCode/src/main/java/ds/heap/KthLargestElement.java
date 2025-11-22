@@ -1,8 +1,6 @@
 package ds.heap;
 
-import java.util.Collections;
 import java.util.PriorityQueue;
-import java.util.Queue;
 
 public class KthLargestElement {
     public static void main(String[] args) {
@@ -13,13 +11,14 @@ public class KthLargestElement {
         System.out.println(findKthLargest(nums,k));
     }
     public static int findKthLargest(int[] nums, int k) {
-        Queue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder());
-        for(int num: nums){
-            maxHeap.add(num);
+        PriorityQueue<Integer>queue = new PriorityQueue<>((a,b) -> a-b);
+        for (int num: nums){
+            queue.add(num);
+            k--;
+            if (k < 0){
+                queue.poll();
+            }
         }
-        for (int i = 0; i < k-1; i++){
-            maxHeap.poll();
-        }
-        return maxHeap.peek();
+        return queue.poll();
     }
 }
