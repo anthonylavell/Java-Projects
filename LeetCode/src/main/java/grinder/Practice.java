@@ -1,32 +1,31 @@
 package grinder;
 
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.Arrays;
 
 public class Practice {
 
-    public static boolean wordBreak(String s, List<String> wordDict) {
-        Set<String>setWordDict = new HashSet<>(wordDict);
-        int len = s.length();
-        boolean[]dp = new boolean[len+1];
-        dp[0] = true;
-        for (int end = 1; end <= len; end++){
-            for (int start = 0; start <end; start++){
-                if (dp[start] && setWordDict.contains(s.substring(start,end))){
-                    dp[end] =true;
-                    break;
+    public static int coinChange(int[] coins, int amount) {
+        Arrays.sort(coins);
+        int[] dp = new int[amount+1];
+        Arrays.fill(dp,-1);
+        dp[0] = 0;
+        for (int coin : coins){
+            for (int index = coin; index < dp.length; index++){
+                int sum = (dp[index-coin]==-1)?-1 : dp[index-coin]+1;
+                if (sum!=-1){
+                dp[index] = dp[index]== -1?sum: Math.min(dp[index],(sum));
                 }
             }
         }
-        return dp[len];
+        return dp[amount];
     }
     public static void main(String[] args) {
-        /*String s = "applepenapple";
-        List<String> wordDict = List.of("apple","pen");*/
-        String s =  "catsandog";
-        List<String> wordDict = List.of("cats","dog","sand","and","cat");
-        System.out.println(wordBreak(s,wordDict));
-
+        /*int[] coins = {2,5,10,1};
+        int amount = 27;*/
+        int[] coins = {1,2,5};
+        int amount = 11;
+        /*int[] coins = {2};
+        int amount = 3;*/
+        System.out.println(coinChange(coins,amount));
     }
 }
