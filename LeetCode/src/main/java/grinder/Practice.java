@@ -1,31 +1,77 @@
 package grinder;
 
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Practice {
 
-    public static int coinChange(int[] coins, int amount) {
-        Arrays.sort(coins);
-        int[] dp = new int[amount+1];
-        Arrays.fill(dp,-1);
-        dp[0] = 0;
-        for (int coin : coins){
-            for (int index = coin; index < dp.length; index++){
-                int sum = (dp[index-coin]==-1)?-1 : dp[index-coin]+1;
-                if (sum!=-1){
-                dp[index] = dp[index]== -1?sum: Math.min(dp[index],(sum));
-                }
+    private static HashMap<String, ArrayList<HashMap<String, Object>>> fleetData;
+
+    public Practice() {
+        fleetData = new HashMap<>();
+        // Initialize fleet data
+        fleetData.put("SpaceX", new ArrayList<HashMap<String, Object>>() {{
+            add(new HashMap<String, Object>() {{
+                put("name", "Falcon 9");
+                put("height", 70);
+                put("payloadToLEO", 22800);
+            }});
+            add(new HashMap<String, Object>() {{
+                put("name", "Falcon Heavy");
+                put("height", 70);
+                put("payloadToLEO", 63800);
+            }});
+        }});
+        fleetData.put("NASA", new ArrayList<HashMap<String, Object>>() {{
+            add(new HashMap<String, Object>() {{
+                put("name", "Space Shuttle");
+                put("height", 56.1);
+                put("payloadToLEO", 24400);
+            }});
+            add(new HashMap<String, Object>() {{
+                put("name", "Saturn V");
+                put("height", 110.6);
+                put("payloadToLEO", 140000);
+            }});
+        }});
+    }
+
+    public static boolean isPalindrome(String s) {
+        int count = 0;
+        s = s.toLowerCase();
+        char[] chars = new char[s.length()];
+        for (char ch : s.toCharArray()){
+            if (Character.isLetterOrDigit(ch)){
+                chars[count++] = ch;
             }
         }
-        return dp[amount];
+        for (int left = 0; left < --count; left++){
+            if (chars[left]!= chars[count]){
+                return false;
+            }
+        }
+        return true;
+
+    }
+
+    public static void addRocket(String organization, HashMap<String, Object> rocket) {
+        // TODO: Add the new rocket to the organization's fleet, creating a new organization's entry if it doesn't exist
+        ArrayList<HashMap<String, Object>> list = new ArrayList<>();
+        list.add(rocket);
+        fleetData.computeIfAbsent(organization, k ->new ArrayList<HashMap<String, Object>>()).add(rocket);
+        fleetData.put(organization,list);
+
     }
     public static void main(String[] args) {
-        /*int[] coins = {2,5,10,1};
-        int amount = 27;*/
-        int[] coins = {1,2,5};
-        int amount = 11;
-        /*int[] coins = {2};
-        int amount = 3;*/
-        System.out.println(coinChange(coins,amount));
+        String s = "A man, a plan, a canal: Panama";
+        System.out.println(isPalindrome(s));
+        HashMap<String, Object> newRocket =  new HashMap<>();
+        // Initialize fleet data
+        newRocket.put("name", "Falcon 14");
+        newRocket.put("height", 80);
+        newRocket.put("payloadToLEO", 24000);
+
+
+        addRocket("to",newRocket);
     }
 }

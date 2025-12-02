@@ -1,3 +1,5 @@
+package comp_p.fantasic;
+
 import java.util.Arrays;
 
 public class Plot {
