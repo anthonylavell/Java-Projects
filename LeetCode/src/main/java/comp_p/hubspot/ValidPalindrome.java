@@ -9,6 +9,24 @@ Given a string s, return true if it is a palindrome, or false otherwise.
 package comp_p.hubspot;
 
 public class ValidPalindrome {
+
+    public static boolean isPalindrome(String s) {
+        int count = 0;
+        s = s.toLowerCase();
+        char[] chars = new char[s.length()];
+        for (char ch : s.toCharArray()){
+            if (Character.isLetterOrDigit(ch)){
+                chars[count++] = ch;
+            }
+        }
+        for (int left = 0; left < --count; left++){
+            if (chars[left]!= chars[count]){
+                return false;
+            }
+        }
+        return true;
+    }
+
     public static void main(String[] args) {
         String str = "0Pant";
         //isPalindrome(str);
@@ -19,22 +37,7 @@ public class ValidPalindrome {
 
     }
 
-    public static boolean isPalindrome(String str) {
-        str = str.toLowerCase();
-        char[] chars = new char[str.length()];
-        int right = -1;
-        for (char ch : str.toCharArray()){
-            if (Character.isLetterOrDigit(ch)){
-                chars[++right] = ch;
-            }
-        }
-        for (int left = 0; left < right; left++){
-            if (chars[left]!=chars[right--]){
-                return false;
-            }
-        }
-        return true;
-    }
+
 
     public static boolean isPalindrome2(String str) {
         str = str.replaceAll("[^\\p{Alnum}]", "").toLowerCase();
