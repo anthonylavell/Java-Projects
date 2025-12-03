@@ -24,7 +24,7 @@ public class Main {
 
        //String [] strs = {"ward","draw","hello"};
       // String [] strs = {"eat","tea","tan","ate","nat","bat"};
-       // System.out.println(new Anagrams().groupAnagrams(strs) );
+       // System.out.println(new GroupAnagrams().groupAnagrams(strs) );
 
      /*  Arrays.sort( strs[0].toCharArray() );
         System.out.println(strs[0]);
