@@ -27,6 +27,8 @@ https://job-boards.greenhouse.io/reddit/jobs/7233359 97 done
 
 https://www.pinterestcareers.com/jobs/7179561/sr-staff-software-engineer-curation/?source=linkedin_limited_listing&utm_source=linkedin_limited_listing&gh_jid=7179561 97
 
+https://www.pinterestcareers.com/jobs/7403570/sr-staff-software-engineer-core-foundations/?gh_jid=7403570 86 done
+
 https://job-boards.greenhouse.io/clearstreet/jobs/7125241 done
 
 https://bcbskc.wd1.myworkdayjobs.com/BCBS_External_Career_Site/job/Remote/Lead-Software-Engineer_R6696?source=LinkedIn Removed
@@ -48,7 +50,7 @@ https://careers.oracle.com/en/sites/jobsearch/job/309223/?lastSelectedFacet=CATE
 https://www.thoughtworks.com/en-us/careers/jobs done
 
 
-https://www.fanaticsinc.com/careers
+https://www.fanaticsinc.com/careers done
 
 https://fa-exki-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/25100/?viewBy=RECOMMENDED_JOBS&selectedFile=Anthony+Ward_1762393111090
 https://fa-exki-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/25134/?keyword=software+engineer&location=United+States&locationId=300000000466546&locationLevel=country&mode=location&sortBy=POSTING_DATES_DESC 94
@@ -111,10 +113,10 @@ Staff Software Engineer, Experimentation Data
 https://careers.airbnb.com/positions/7306868/ 95
 
 https://www.samsara.com/company/careers/roles/7266697?gh_jid=7266697&gh_src=a42fbb361
-https://www.samsara.com/company/careers/roles/7210180?gh_jid=7210180 98 done
-https://www.samsara.com/company/careers/roles/7210188?gh_jid=7210188 99 done
-https://www.samsara.com/company/careers/roles/7220402?gh_jid=7220402 99
-https://www.samsara.com/company/careers/roles/7170980?gh_jid=7170980 97 done
+https://www.samsara.com/company/careers/roles/7210180?gh_jid=7210180 98 done Senior Software Engineer I - External Platform java
+https://www.samsara.com/company/careers/roles/7210188?gh_jid=7210188 99 done Senior Software Engineer II - External Platform deny
+https://www.samsara.com/company/careers/roles/7220402?gh_jid=7220402 99 done
+https://www.samsara.com/company/careers/roles/7170980?gh_jid=7170980 97 done Senior Software Engineer - Route Execution
 https://www.samsara.com/company/careers/roles/7362937?gh_jid=7362937 91
 https://www.samsara.com/company/careers/roles/7219952?gh_jid=7219952 94  2 5 7
 
@@ -146,10 +148,11 @@ https://jobs.ashbyhq.com/phantom/0af91b03-eb71-400c-b496-356f1fb147d3 done
 https://jobs.ashbyhq.com/phantom/d480082b-a446-40fb-be24-f364c07ef8a9
 
 https://www.atlassian.com/company/careers/all-jobs?team=&location=United%20States&search=
+https://www.atlassian.com/company/careers/details/16385 93 done
 
 
 https://www.braze.com/jobs?page=1
-https://job-boards.greenhouse.io/braze/jobs/7386078?gh_jid=7386078 95
+https://job-boards.greenhouse.io/braze/jobs/7386078?gh_jid=7386078 95 done
 
 https://jobs.ashbyhq.com/hawk/1df16a30-c9d2-4c0e-8ebf-9377ceec11fb/application?utm_source=LinkedInPaid done
 
@@ -178,6 +181,20 @@ https://careers.pnc.com/global/en/job/PNC1GLOBALR193521/Software-Engineer-Sr?utm
 https://www.disneycareers.com/en/search-jobs N/A
 
 https://careers.united.com/us/en/job/UAIUADUSWHQ00025737EXTERNALENUSTALEO/Senior-Developer-Information-Technology?utm_source=linkedin&utm_medium=phenom-feeds 98 done
+
+https://jobs.ashbyhq.com/quora/1b0f97cb-9261-420f-9e41-8fbba913e39b?locationId=2756395d-cc83-4034-9fb7-62eaf72027c9 91
+https://jobs.ashbyhq.com/quora/2044e81f-570d-4501-8bba-05dc464dd224?locationId=2756395d-cc83-4034-9fb7-62eaf72027c9 88
+
+https://careers.cisco.com/global/en/job/2002232/Site-Reliability-Engineer-Java 78 
+https://careers.cisco.com/global/en/job/2000028/Lead-Software-Engineer-Remote-in-the-U-S 83
+https://careers.cisco.com/global/en/job/2000882/Staff-Software-Engineer 90
+https://careers.cisco.com/global/en/job/1441483/Software-Engineer-Quote-To-Order-Remote 92 done
+
+https://thehartford.wd5.myworkdayjobs.com/en-US/Careers_External/job/Columbus-OH/Staff-Software-Engineer_R2523142?source=LinkedIn&jobFamilyGroup=5d03d31a903d0107b01123e5774c7028&locationCountry=bc33aa3152ec42d4995f4791a106ed09&locationRegionStateProvince=d8bb292ed9fe44a2899a990ad569538c 94 
+
+https://thehartford.wd5.myworkdayjobs.com/en-US/Careers_External/job/Chicago-IL/Staff-Software-Engineer_R2523141-1?source=LinkedIn&jobFamilyGroup=5d03d31a903d0107b01123e5774c7028&locationCountry=bc33aa3152ec42d4995f4791a106ed09&locationRegionStateProvince=d8bb292ed9fe44a2899a990ad569538c 94
+
+https://thehartford.wd5.myworkdayjobs.com/en-US/Careers_External/job/Chicago-IL/Sr-Staff-Software-Engineer--Java-Gen-AI-AWS-_R2523044?source=LinkedIn&jobFamilyGroup=5d03d31a903d0107b01123e5774c7028&locationCountry=bc33aa3152ec42d4995f4791a106ed09&locationRegionStateProvince=d8bb292ed9fe44a2899a990ad569538c 96 
 
 postgre
 5432

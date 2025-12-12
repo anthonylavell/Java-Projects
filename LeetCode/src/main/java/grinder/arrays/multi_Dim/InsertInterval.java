@@ -5,6 +5,29 @@ import java.util.Arrays;
 import java.util.List;
 
 public class InsertInterval {
+
+    public static int[][] insert2(int[][] intervals, int[] newInterval) {
+        List<int[]>listOfTimes = new ArrayList<>();
+        int [] sTime = new int[intervals.length+1];
+        int [] eTime = new int[intervals.length+1];
+        sTime[sTime.length-1] = newInterval[0];
+        eTime[eTime.length-1] = newInterval[1];
+        for (int row = 0; row < intervals.length; row++){
+            sTime[row] = intervals[row][0];
+            eTime[row] = intervals[row][1];
+        }
+        Arrays.sort(sTime);
+        Arrays.sort(eTime);
+        int startIdx = 0;
+        for (int endIdx = 1; endIdx <= sTime.length; endIdx++){
+            if (endIdx==sTime.length || sTime[endIdx]>eTime[endIdx-1]){
+                listOfTimes.add(new int[]{sTime[startIdx],eTime[endIdx-1]});
+                startIdx = endIdx;
+            }
+        }
+        return listOfTimes.toArray(new int[0][]);
+    }
+
     public static void main(String[] args) {
         int [][] intervals = {{}};
         int [] newInterval = {2,5};

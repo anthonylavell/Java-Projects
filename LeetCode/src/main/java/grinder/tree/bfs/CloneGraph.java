@@ -1,39 +1,76 @@
-package grinder.tree.bfs;
+/*
+Given a reference of a node in a connected undirected graph.
 
-import ds.node.singly_node.Node;
+Return a deep copy (clone) of the graph.
+
+Each node in the graph contains a value (int) and a list (List[Node]) of its neighbors.
+
+class Node {
+    public int val;
+    public List<Node> neighbors;
+}
+
+Test case format:
+
+For simplicity, each node's value is the same as the node's index (1-indexed). For example,
+the first node with val == 1, the second node with val == 2, and so on. The graph is represented
+in the test case using an adjacency list.
+
+An adjacency list is a collection of unordered lists used to represent a finite graph. Each list
+describes the set of neighbors of a node in the graph.
+
+The given node will always be the first node with val = 1. You must return the copy of the given
+node as a reference to the cloned graph.
+ */
+
+package grinder.tree.bfs;
 
 import java.util.*;
 
-public class CloneGraph {
-    public static void main(String[] args) {
+class Node {
+    public int val;
+    public List<Node> neighbors;
 
+    public Node() {
+        val = 0;
+        neighbors = new ArrayList<Node>();
     }
 
+    public Node(int _val) {
+        val = _val;
+        neighbors = new ArrayList<Node>();
+    }
+
+    public Node(int _val, ArrayList<Node> _neighbors) {
+        val = _val;
+        neighbors = _neighbors;
+    }
+}
+
+public class CloneGraph {
     public static Node cloneGraph(Node node) {
         if(node == null){
-            return node;
+            return null;
         }
-        if(node.neighbors.isEmpty()){
-
-            return new Node(1);
-        }
-        Map<Node,Node>mapOfClones = new HashMap<>();
-        Deque<Node>deque = new ArrayDeque<>();
+        Deque<Node>deque =new ArrayDeque<>();
         deque.add(node);
-        mapOfClones.put(node,new Node(node.val));
-        Node key = node;
-       while (!deque.isEmpty()){
-           Node root = deque.pop();
-           for (Node neighbor : root.neighbors){
-               if (!mapOfClones.containsKey(neighbor)) {
-                   deque.add(neighbor);
-                   mapOfClones.put(neighbor,new Node(neighbor.val));
-               }
-               mapOfClones.get(root).neighbors.add(mapOfClones.get(neighbor));
+        Map<Node,Node>mapOfNode = new HashMap<>();
+        mapOfNode.put(node,new Node(node.val));
+        while (!deque.isEmpty()){
+            Node temp = deque.poll();
+            for (Node neighbor : temp.neighbors ){
+                Node newNode = mapOfNode.get(neighbor);
+                if (!mapOfNode.containsKey(neighbor)){
+                    newNode = new Node(neighbor.val);
+                    deque.add(neighbor);
+                    mapOfNode.put(neighbor,newNode);
+                }
+                mapOfNode.get(temp).neighbors.add(newNode);
+            }
+        }
+        return mapOfNode.get(node);
+    }
+    public static void main(String[] args) {
 
-           }
-       }
-
-        return mapOfClones.get(key);
     }
 }
