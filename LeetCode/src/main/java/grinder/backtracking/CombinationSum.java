@@ -37,29 +37,32 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CombinationSum {
-    public static void main(String[] args) {
-        int [] candidates = {2,3,5};
-        int target = 8;
-        System.out.println(combinationSum(candidates,target));
-    }
 
-    public static List<List<Integer>> combinationSum(int[] candidates, int target) {
-        List<List<Integer>>sum = new ArrayList<>();
-        helpCombinationSum(candidates,target,0,new ArrayList<>(),sum);
+    private List<List<Integer>> sum = new ArrayList<>();
+    public List<List<Integer>> combinationSum(int[] candidates, int target) {
+        findCombination(new ArrayList<>(),candidates,target,0);
+        int i = 0;
         return sum;
     }
 
-    private static void helpCombinationSum(int[] candidates, int target,  int start, List<Integer> list, List<List<Integer>>sum) {
-        if(target <= 0){
-            if(target == 0) {
-                sum.add(new ArrayList<>(list));
-            }
+    private void findCombination(List<Integer>subList, int[] candidates, int target, int index){
+        if (target ==0){
+            sum.add(new ArrayList<>(subList));
             return;
         }
-        for(int i = start; i < candidates.length; i++){
-            list.add(candidates[i]);
-            helpCombinationSum(candidates,(target -list.get(list.size()-1)),i,list,sum);
-            list.remove(list.size()-1);
+        for (int idx = index; idx < candidates.length; idx++){
+            if (target-candidates[idx] >=0) {
+                subList.add(candidates[idx]);
+                findCombination(subList, candidates, target-candidates[idx], idx);
+                subList.remove(subList.size()-1);
+            }
         }
+    }
+
+    public static void main(String[] args) {
+        CombinationSum combinationSum = new CombinationSum();
+        int [] candidates = {2,3,5};
+        int target = 8;
+        System.out.println(combinationSum.combinationSum(candidates,target));
     }
 }
