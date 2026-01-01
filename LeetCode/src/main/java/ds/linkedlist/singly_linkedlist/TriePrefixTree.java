@@ -21,7 +21,6 @@ public class TriePrefixTree {
                 current.children[idx] = new Node();
             current = current.children[idx];
         }
-        int i = 0;
         current.found = true;
     }
 
@@ -49,8 +48,33 @@ public class TriePrefixTree {
 
     public static void main(String[] args) {
         TriePrefixTree trie = new TriePrefixTree();
-        trie.insert("ant");
-        System.out.println(trie.search("ant"));
-        System.out.println(trie.search("nat"));
+        trie.insert("app");
+        trie.insert("apple");
+        trie.insert("beer");
+        trie.insert("add");
+        trie.insert("jam");
+        trie.insert("rental");
+
+        System.out.println("Search:");
+        System.out.println(trie.search("apps"));
+        System.out.println(trie.search("app"));
+        System.out.println(trie.search("ad"));
+        System.out.println(trie.search("applepie"));
+        System.out.println(trie.search("rest"));
+        System.out.println(trie.search("jan"));
+        System.out.println(trie.search("rent"));
+        System.out.println(trie.search("beer"));
+        System.out.println(trie.search("jam"));
+
+        System.out.println("StartWith");
+        System.out.println(trie.startsWith("apps"));
+        System.out.println(trie.startsWith("app"));
+        System.out.println(trie.startsWith("ad"));
+        System.out.println(trie.startsWith("applepie"));
+        System.out.println(trie.startsWith("rest"));
+        System.out.println(trie.startsWith("jan"));
+        System.out.println(trie.startsWith("rent"));
+        System.out.println(trie.startsWith("beer"));
+        System.out.println(trie.startsWith("jam"));
     }
 }

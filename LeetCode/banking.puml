@@ -1,0 +1,14 @@
+@startuml
+class User {
+  +id: String
+  +name: String
+}
+
+class Account {
+  +balance: double
+  +deposit()
+  +withdraw()
+}
+
+User "1" --* "0..*" Account
+@enduml
