@@ -1,14 +1,31 @@
 @startuml
-class User {
-  +id: String
-  +name: String
-}
 
 class Account {
-  +balance: double
-  +deposit()
-  +withdraw()
+  -accountId: String
+  -balanceCents: long
+  -status: Enu
+  -ledger: LinkList<String>
+  +Account(String id)
+  +deposit(long amount)
+  +withDraw()
+  +getBalance()
+  +setAccountStatus(String status)
+  +getAccountStatus()
+  +getAccountHistory()
+  -setAccountLedge()
+  +getAccountLedge()
 }
 
-User "1" --* "0..*" Account
+class Transaction {
+  -Map:String,Account()
+  +createAccount()
+  +deposit()
+  +withDraw()
+  +transfer()
+  +getBalance(String id)
+  +getHistory(String id, int max)
+  +setStatus(String status)
+}
+
+Account "1" --* "0..*" Transaction
 @enduml
