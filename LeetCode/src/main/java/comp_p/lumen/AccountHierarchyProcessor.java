@@ -43,42 +43,71 @@ public class AccountHierarchyProcessor {
      * @return List of root accounts (accounts with no parent)
      * @throws ValidationException if hierarchy is invalid
      */
-    public List<Account> processAccountHierarchy(List<Account> accounts)
-            throws ValidationException {
-        // TODO: Implement validation and return root accounts
-        // 1. Validate no cycles exist
-        // 2. Validate all parent references are valid
-        // 3. Return root accounts (parentId is null or empty)
-        Map<String, Set<String>> graph = new HashMap<>();
-        Map<String,Account>vaildParent = new HashMap<>();
-        List<Account> parentAccount = new ArrayList<>();
+    public List<Account> processAccountHierarchy(List<Account> accounts) throws ValidationException {
+        if (accounts == null) return Collections.emptyList();
 
-        for (Account account : accounts){
-            String child = account.getId();
-            String parent = account.getParentId() == null ? "" :account.getParentId();
-            graph.putIfAbsent(child,new HashSet<>());
-            if (!parent.isEmpty()) {
-                graph.putIfAbsent(parent, new HashSet<>());
-                if (graph.get(parent) != null) {
-                    graph.get(child).addAll(graph.get(parent));
-                }
-                if (graph.get(child).contains(child)) {
-                    throw new ValidationException("Cycle");
-                }
-                graph.get(child).add(parent);
-            }
-            vaildParent.putIfAbsent(child, account);
-        }
+        // 1) Index accounts by id + validate duplicates / blank ids
+        Map<String, Account> byId = new HashMap<>();
+        for (Account a : accounts) {
+            if (a == null) continue;
 
-        for(String parent : graph.keySet()){
-            if(vaildParent.get(parent) == null){
-                throw new ValidationException("No Parent");
-            }else if(graph.get(parent).isEmpty()){
-                parentAccount.add(vaildParent.get(parent));
+            String id = trim(a.getId());
+            if (isBlank(id)) throw new ValidationException("Blank account id: " + a);
+
+            if (byId.putIfAbsent(id, a) != null) {
+                throw new ValidationException("Duplicate account id: " + id);
             }
         }
-        return parentAccount;
+
+        // 2) Validate parent references exist + prevent self-parent
+        for (Account a : accounts) {
+            if (a == null) continue;
+
+            String id = trim(a.getId());
+            String pid = trim(a.getParentId());
+
+            if (!isBlank(pid)) {
+                if (!byId.containsKey(pid)) {
+                    throw new ValidationException("Missing parentId '" + pid + "' for account '" + id + "'");
+                }
+                if (id.equals(pid)) {
+                    throw new ValidationException("Cycle: account '" + id + "' is its own parent");
+                }
+            }
+        }
+
+        // 3) Cycle detection (walk parent chain for each node)
+        for (String startId : byId.keySet()) {
+            Set<String> seen = new HashSet<>();
+            String cur = startId;
+
+            while (true) {
+                if (!seen.add(cur)) {
+                    throw new ValidationException("Cycle detected involving account id: " + cur);
+                }
+                String pid = trim(byId.get(cur).getParentId());
+                if (isBlank(pid)) break;      // reached a root
+                cur = pid;
+            }
+        }
+
+        // 4) Return roots
+        List<Account> roots = new ArrayList<>();
+        for (Account a : accounts) {
+            if (a == null) continue;
+            if (isBlank(trim(a.getParentId()))) roots.add(a);
+        }
+        return roots;
     }
+
+    private static boolean isBlank(String s) {
+        return s == null || s.trim().isEmpty();
+    }
+
+    private static String trim(String s) {
+        return s == null ? null : s.trim();
+    }
+
     // Test method
     public static void main(String[] args) {
         AccountHierarchyProcessor processor = new AccountHierarchyProcessor();
