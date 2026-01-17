@@ -192,9 +192,53 @@ https://careers.cisco.com/global/en/job/1441483/Software-Engineer-Quote-To-Order
 
 https://thehartford.wd5.myworkdayjobs.com/en-US/Careers_External/job/Columbus-OH/Staff-Software-Engineer_R2523142?source=LinkedIn&jobFamilyGroup=5d03d31a903d0107b01123e5774c7028&locationCountry=bc33aa3152ec42d4995f4791a106ed09&locationRegionStateProvince=d8bb292ed9fe44a2899a990ad569538c 94 
 
-https://thehartford.wd5.myworkdayjobs.com/en-US/Careers_External/job/Chicago-IL/Staff-Software-Engineer_R2523141-1?source=LinkedIn&jobFamilyGroup=5d03d31a903d0107b01123e5774c7028&locationCountry=bc33aa3152ec42d4995f4791a106ed09&locationRegionStateProvince=d8bb292ed9fe44a2899a990ad569538c 94
+https://thehartford.wd5.myworkdayjobs.com/en-US/Careers_External/job/Chicago-IL/Staff-Software-Engineer_R2523141-1?source=LinkedIn&jobFamilyGroup=5d03d31a903d0107b01123e5774c7028&locationCountry=bc33aa3152ec42d4995f4791a106ed09&locationRegionStateProvince=d8bb292ed9fe44a2899a990ad569538c 94 done
 
-https://thehartford.wd5.myworkdayjobs.com/en-US/Careers_External/job/Chicago-IL/Sr-Staff-Software-Engineer--Java-Gen-AI-AWS-_R2523044?source=LinkedIn&jobFamilyGroup=5d03d31a903d0107b01123e5774c7028&locationCountry=bc33aa3152ec42d4995f4791a106ed09&locationRegionStateProvince=d8bb292ed9fe44a2899a990ad569538c 96 
+https://thehartford.wd5.myworkdayjobs.com/en-US/Careers_External/job/Chicago-IL/Sr-Staff-Software-Engineer--Java-Gen-AI-AWS-_R2523044?source=LinkedIn&jobFamilyGroup=5d03d31a903d0107b01123e5774c7028&locationCountry=bc33aa3152ec42d4995f4791a106ed09&locationRegionStateProvince=d8bb292ed9fe44a2899a990ad569538c 96 done
+
+https://thehartford.wd5.myworkdayjobs.com/en-US/Careers_External/job/Hartford-CT/Manager-Software-Engineering---Hybrid_R2523284?source=LinkedIn&jobFamilyGroup=5d03d31a903d0107b01123e5774c7028&locationCountry=bc33aa3152ec42d4995f4791a106ed09&locationRegionStateProvince=d8bb292ed9fe44a2899a990ad569538c 93 done
+
+https://jobs.grainger.com/job/CHICAGO-Software-Engineering-Manager-IL-60661-4555/1327402900/ 95 done
+
+https://jobs.ashbyhq.com/Grindr%20LLC/9470f794-b8c8-438d-aca7-e493f0f4d9c3?utm_source=LinkedIn 96 done
+https://jobs.ashbyhq.com/Grindr%20LLC/470f712b-47d7-4d90-a7b2-e788db5d1251?departmentId=677afecd-10e3-4ed2-808e-df5f1687c8a0&utm_source=LinkedIn 97 done
+https://jobs.ashbyhq.com/Grindr%20LLC/00ff0a32-588b-4944-a159-c05e7d2f76bb/application?departmentId=677afecd-10e3-4ed2-808e-df5f1687c8a0&utm_source=LinkedIn 90 done
+
+https://jobs.ashbyhq.com/nerdwallet/06bedc89-a0ae-4cff-a810-cf7d5c28abee?departmentId=b0cfe284-cc04-4d65-b9d3-3bf716b254d6&utm_source=LinkedInJobs 95 done
+https://jobs.ashbyhq.com/nerdwallet/58914a67-535a-4ca2-9b67-fbc0307969bb?departmentId=b0cfe284-cc04-4d65-b9d3-3bf716b254d6&utm_source=LinkedInJobs 92 DONE
+https://jobs.ashbyhq.com/nerdwallet/1694c7e3-66a3-4fc6-9e77-597e2ac2514b?departmentId=b0cfe284-cc04-4d65-b9d3-3bf716b254d6&utm_source=LinkedInJobs 88
+
+https://job-boards.greenhouse.io/sonyinteractiveentertainmentglobal/jobs/5723006004?gh_src=sgp49gfz4us 95 done
+https://job-boards.greenhouse.io/sonyinteractiveentertainmentglobal/jobs/5687553004?gh_src=sgp49gfz4us 91
+
+https://careers.veeva.com/job/d4dbcee9-733b-4778-a93b-1b074085fd5a/senior-software-engineer-java-boston-ma/?lever-source=LinkedIn 96 done
+
+https://www.mutualofomaha.com/careers/jobs/detail/504406- Engineer (Java, Spring Boot, JUnit/Spock) 91 done
+
+https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/Senior-Software-Engineer--Full-Stack_JR2007194 86 done
+
+https://aholddelhaizeusa.careerswithus.com/job/IT-%26-Technology/Senior-Site-Reliability-Engineer/Chicago-IL/ADUSArms/436142_external_USA-IL-Chicago?utm_source=LinkedIn Senior Site Reliability Engineer 92 done
+
+https://careers.airbnb.com/positions/7450454/?gh_src=34ewj2 Senior Software Engineer, Guest & Host (Listing) 88 done
+
+https://job-boards.greenhouse.io/grafanalabs/jobs/5602684004?src=LinkedIn Senior Backend Engineer, Alerting 90 done
+
+https://www.metacareers.com/profile/job_details/704019139159184 Software Engineer (Leadership) - Infrastructure 94 done
+
+https://careers.toasttab.com/jobs/senior-software-engineer-delivery-service-united-states Senior Software Engineer, Delivery Service 91 done
+https://careers.toasttab.com/jobs/staff-software-engineer-retail-boston-massachusetts-united-states Staff Software Engineer, Retail 93 done
+https://careers.toasttab.com/jobs/staff-software-engineer-tech-lead-remote-united-states Staff Software Engineer, Tech Lead 95 too late
+
+
 
 postgre
 5432
+
+Hello Brother Isaac,
+
+How are you?
+
+I recently applied for a Distributed Systems Software Engineer - WarpStream (R03352) and wanted to reach out directly. I have over a decade of experience building large-scale systems, microservices, distributed systems, and cloud-native architectures. I’m very interested in joining confluent’s engineering team and would like to discuss more about the role. I was hoping you could help connect me with the appropriate recruiter or hiring manager.
+
+Thanks so much!
+

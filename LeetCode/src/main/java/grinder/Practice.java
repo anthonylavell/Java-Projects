@@ -1,49 +1,38 @@
 package grinder;
 
-import java.util.*;
-
-class Node {
-    public int val;
-    public List<Node> neighbors;
-    public Node() {
-        val = 0;
-        neighbors = new ArrayList<>();
-    }
-    public Node(int _val) {
-        val = _val;
-        neighbors = new ArrayList<Node>();
-    }
-    public Node(int _val, ArrayList<Node> _neighbors) {
-        val = _val;
-        neighbors = _neighbors;
-    }
-}
+class TreeNode {
+      int val;
+      TreeNode left;
+      TreeNode right;
+      TreeNode() {}
+      TreeNode(int val) { this.val = val; }
+     TreeNode(int val, TreeNode left, TreeNode right) {
+        this.val = val;
+         this.left = left;
+         this.right = right;
+     }
+  }
 
 public class Practice {
-    public Node cloneGraph(Node node) {
-        if (node==null){
-            return null;
+
+    public boolean isValidBST(TreeNode root) {
+        long min = Long.MIN_VALUE;
+        long max = Long.MAX_VALUE;
+        return foundValidBST(root,min,max);
+    }
+
+    public boolean foundValidBST(TreeNode root, long min, long max) {
+        if (root == null){
+            return true;
         }
-        Map<Node,Node>nodeMap = new HashMap<>();
-        Deque<Node>deque =new ArrayDeque<>();
-        deque.add(node);
-        nodeMap.put(node,new Node(node.val));
-        while (!deque.isEmpty()){
-            Node key = deque.poll();
-            List<Node> neighbors = key.neighbors;
-            for (Node neighbor: neighbors){
-                if (!nodeMap.containsKey(neighbor)){
-                    deque.add(neighbor);
-                    nodeMap.put(neighbor, new Node(neighbor.val));
-                }
-                nodeMap.get(key).neighbors.add(nodeMap.get(neighbor));
-            }
+        if (root.val <= min && root.val >= max){
+            return false;
         }
-        return nodeMap.get(node);
+        return foundValidBST(root.left,min, root.val) || foundValidBST(root.right, root.val,max);
     }
 
     public static void main(String[] args) {
-        Practice practice = new Practice();
+        Practice trie = new Practice();
 
 
     }
