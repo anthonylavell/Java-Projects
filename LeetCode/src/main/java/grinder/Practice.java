@@ -1,39 +1,25 @@
 package grinder;
 
-class TreeNode {
-      int val;
-      TreeNode left;
-      TreeNode right;
-      TreeNode() {}
-      TreeNode(int val) { this.val = val; }
-     TreeNode(int val, TreeNode left, TreeNode right) {
-        this.val = val;
-         this.left = left;
-         this.right = right;
-     }
-  }
+import java.util.ArrayDeque;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Queue;
 
 public class Practice {
+    public List<String> getAllItems( Queue<String> warehouseQueue) {
+        // TODO: Return all items in the queue as a list.
 
-    public boolean isValidBST(TreeNode root) {
-        long min = Long.MIN_VALUE;
-        long max = Long.MAX_VALUE;
-        return foundValidBST(root,min,max);
+        return warehouseQueue.stream().toList();
     }
-
-    public boolean foundValidBST(TreeNode root, long min, long max) {
-        if (root == null){
-            return true;
-        }
-        if (root.val <= min && root.val >= max){
-            return false;
-        }
-        return foundValidBST(root.left,min, root.val) || foundValidBST(root.right, root.val,max);
-    }
-
     public static void main(String[] args) {
         Practice trie = new Practice();
-
-
+        Queue<String> warehouseQueue = new ArrayDeque<>();
+        warehouseQueue.offer("lavell");
+        warehouseQueue.offer("anthony");
+        warehouseQueue.offer("ward");
+        List<String> temp = trie.getAllItems(warehouseQueue);
+        System.out.println(temp);
+       temp.sort(Comparator.naturalOrder());
+        System.out.println(temp);
     }
 }

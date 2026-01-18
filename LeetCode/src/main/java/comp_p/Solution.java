@@ -102,7 +102,7 @@ class StockCollection {
 
     int getMaxPrice() {
         /** Return the maximum price recorded in this StockCollection. */
-        if(priceRecords == null || priceRecords.size() < 1){
+        if(priceRecords == null || priceRecords.isEmpty()){
             return -1;
         }
 
@@ -111,7 +111,7 @@ class StockCollection {
 
     int getMinPrice() {
         /** Return the minimum price recorded in this StockCollection. */
-        if(priceRecords == null || priceRecords.size() < 1){
+        if(priceRecords == null || priceRecords.isEmpty()){
             return -1;
         }
         return priceRecords.stream().mapToInt(record -> record.price).min().getAsInt();
@@ -119,14 +119,14 @@ class StockCollection {
 
     double getAvgPrice() {
         /** Return the average price recorded in this StockCollection. */
-        if(priceRecords == null || priceRecords.size() < 1){
+        if(priceRecords == null || priceRecords.isEmpty()){
             return -1.0;
         }
         double total = priceRecords.stream().mapToInt(record -> record.price).sum();
         return total / priceRecords.size();
     }
     Object[] getBiggestChange(){
-        if(priceRecords == null || priceRecords.size() < 1){
+        if(priceRecords == null || priceRecords.isEmpty()){
             return null;
         }
         priceRecords.sort(Comparator.comparing(o->o.date));
