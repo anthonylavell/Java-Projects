@@ -1,9 +1,8 @@
 package grinder;
 
-import java.util.ArrayDeque;
-import java.util.Comparator;
 import java.util.List;
 import java.util.Queue;
+import java.util.Stack;
 
 public class Practice {
     public List<String> getAllItems( Queue<String> warehouseQueue) {
@@ -13,13 +12,16 @@ public class Practice {
     }
     public static void main(String[] args) {
         Practice trie = new Practice();
-        Queue<String> warehouseQueue = new ArrayDeque<>();
-        warehouseQueue.offer("lavell");
-        warehouseQueue.offer("anthony");
-        warehouseQueue.offer("ward");
-        List<String> temp = trie.getAllItems(warehouseQueue);
-        System.out.println(temp);
-       temp.sort(Comparator.naturalOrder());
-        System.out.println(temp);
+        Stack<int[]> historyStack = new Stack<>();
+        historyStack.add(new int[] {0,0});
+        historyStack.add(new int[] {1,0});
+        historyStack.add(new int[] {1,1});
+        List<int[]>path = historyStack.stream().toList();
+        for (int[] position : path) {
+            System.out.println(arrayToString(position));
+        }
+    }
+    private static String arrayToString(int[] array) {
+        return array[0] + ", " + array[1];
     }
 }
