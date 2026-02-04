@@ -1,27 +1,43 @@
 package grinder;
 
-import java.util.List;
-import java.util.Queue;
-import java.util.Stack;
+import java.util.*;
 
 public class Practice {
-    public List<String> getAllItems( Queue<String> warehouseQueue) {
-        // TODO: Return all items in the queue as a list.
-
-        return warehouseQueue.stream().toList();
-    }
-    public static void main(String[] args) {
-        Practice trie = new Practice();
-        Stack<int[]> historyStack = new Stack<>();
-        historyStack.add(new int[] {0,0});
-        historyStack.add(new int[] {1,0});
-        historyStack.add(new int[] {1,1});
-        List<int[]>path = historyStack.stream().toList();
-        for (int[] position : path) {
-            System.out.println(arrayToString(position));
+    public boolean canFinish(int numCourses, int[][] prerequisites) {
+        Map<Integer, List<Integer>> graph = new HashMap<>();
+        Map<Integer, Integer> inDegree = new HashMap<>();
+        Deque<Integer> deque = new ArrayDeque<>();
+        int count = 0;
+        for(int[]pre: prerequisites){
+            inDegree.putIfAbsent(pre[1], 0);
+            inDegree.put(pre[0], inDegree.getOrDefault(pre[0],0) + 1);
+            graph.computeIfAbsent(pre[1],k->new ArrayList<>()).add(pre[0]);
         }
+
+        for (Map.Entry<Integer, Integer>entry: inDegree.entrySet()){
+            if (entry.getValue() < 1){
+                deque.add(entry.getKey());
+            }
+        }
+
+        while (!deque.isEmpty()){
+            int course = deque.poll();
+            count++;
+            List<Integer> neighbours = graph.getOrDefault(course,new ArrayList<>());
+            for(Integer neighbour: neighbours){
+                inDegree.put(neighbour, inDegree.get(neighbour) - 1);
+                if (inDegree.get(neighbour) == 0){
+                    deque.add(neighbour);
+                }
+            }
+        }
+        return count == inDegree.size();
     }
-    private static String arrayToString(int[] array) {
-        return array[0] + ", " + array[1];
+
+    public static void main(String[] args) {
+        Practice practice = new Practice();
+        int[][] prerequisites = new int[][]{{1,0},{2,1}};
+        int numCourses = 3;
+        System.out.println(practice.canFinish(numCourses, prerequisites));
     }
 }
