@@ -12,17 +12,11 @@ import java.util.stream.Stream;
 
 public class BankAccount {
     private Map<String,Account> mapOfAccounts;
-    //public String path = "C:\\Users\\Anthony\\Documents\\Programming\\Code\\Java-Projects\\LeetCode\\src\\main\\resources\\csvfile\\Command_Log__first_30_rows_.cvs";
-      public String path = "C:\\Users\\Anthony\\Documents\\Programming\\Code\\Java-Projects\\LeetCode\\src\\main\\resources\\jsonfile\\command_log_first30.json";
+
     public BankAccount(){
         this.mapOfAccounts = new LinkedHashMap<>();
     }
 
-    public static void main(String[] args) {
-        BankAccount bank = new BankAccount();
-        bank.sendData(bank.path);
-        bank.topAccounts();
-    }
     public String sendData(String filePath){
         if (filePath.endsWith(".json")){
              jsonData(filePath);
@@ -32,6 +26,13 @@ public class BankAccount {
             return "Success";
         }
         return "File not File";
+    }
+
+    public void sendData(List<String> commands){
+        for (String command : commands){
+            String[] commandArr = command.split(",");
+            dataExtraction(commandArr);
+        }
     }
 
     private void jsonData(String path){
@@ -66,7 +67,7 @@ public class BankAccount {
                     continue;
                 }
 
-                String [] parts = line.split(",",-1);
+                String [] parts = line.split(",");
                 dataExtraction(parts);
             }
 
@@ -86,14 +87,22 @@ public class BankAccount {
                 }
             }
             case "deposit" ->{
-                if (depositDataExtraction(accountDetails)){
-                    System.out.printf("Deposit Of %s, was successfully deposit into %s\n", accountDetails[5], accountDetails[2]);
+                String accountNum = accountDetails[2];
+                double amount = Double.parseDouble(accountDetails[5]);
+                    Account account = isExist(accountNum);
+                if (account != null && deposit(account, amount)){
+                        System.out.printf("Deposit Of %s, was successfully deposit into %s\n", accountDetails[5], accountDetails[2]);
                 }else {
                     System.out.printf("Deposit Of %s, was NOT successfully deposit into %s\n", accountDetails[5], accountDetails[2]);
                 }
             }
             case "transfer" -> {
-                if (transferDataExtraction(accountDetails)){
+                String accountNum = accountDetails[6];
+                String accountNum2 = accountDetails[7];
+                double amount = Double.parseDouble(accountDetails[5]);
+                Account from = isExist(accountNum);
+                Account to = isExist(accountNum2);
+                if (from!=null && to!=null && transfer(from,to,amount)){
                     System.out.printf("Transfer Of %s, from %s was successfully transfer into %s\n", accountDetails[5],accountDetails[6],accountDetails[7] );
                 }else {
                     System.out.printf("Transfer Of %s, from %s was NOT successfully transfer into %s\n", accountDetails[5],accountDetails[6],accountDetails[7] );
@@ -104,48 +113,51 @@ public class BankAccount {
 
     private boolean createAccountDataExtraction(String[] accountDetails){
         String accountNum = accountDetails[2];
+        if (isExist(accountNum)!=null){
+            return false;
+        }
         String name = accountDetails[3];
-        return createAccount(accountNum,name);
+        mapOfAccounts.put(accountNum,new Account(accountNum, name));
+        return true;
     }
 
-    private boolean depositDataExtraction(String[] accountDetails){
-        String accountNum = accountDetails[2];
-        if (isExist(accountNum)){
-            double amount = Double.parseDouble(accountDetails[5]);
-            return mapOfAccounts.get(accountNum).deposit(amount);
+    private boolean deposit(Account account, double amount){
+        double currentBal = account.getBalance() + amount;
+        if (amount > 0){
+            account.setBalance(currentBal);
+            account.addActivity(currentBal);
+            return true;
         }
         return false;
     }
 
-    private boolean transferDataExtraction(String[] accountDetails){
-        String accountNum = accountDetails[6];
-        String accountNum2 = accountDetails[7];
-        double amount = Double.parseDouble(accountDetails[5]);
-        if (isExist(accountNum) && isExist(accountNum2)){
-            //mapOfAccounts.get(accountNum).addActivity(amount);
-            return mapOfAccounts.get(accountNum).withDrawn(amount) && mapOfAccounts.get(accountNum2).deposit(amount);
+    private boolean withDrawn(Account account, double amount){
+        double currentBal = account.getBalance() - amount;
+        if (currentBal >= 0){
+            account.setBalance(currentBal);
+            account.addActivity(currentBal);
+            return true;
         }
         return false;
     }
 
-    private boolean createAccount(String accountNum, String name){
-        Account account = new Account(accountNum, name);
-        return mapOfAccounts.putIfAbsent(accountNum,account) == null;
+    private boolean transfer(Account from, Account to, double amount){
+            if (withDrawn(from,amount)){
+                return false;
+            }
+            deposit(to,amount);
+
+        return true;
     }
 
-    private boolean isExist(String accountNum){
-        return mapOfAccounts.containsKey(accountNum);
+    private Account isExist(String accountNum){
+        return mapOfAccounts.getOrDefault(accountNum,null);
     }
 
     public void topAccounts(){
         mapOfAccounts.values().stream()
-                .sorted(Comparator.comparingDouble(Account::getTransactionsTotal).reversed())
+                .sorted(Comparator.comparingDouble(Account::getActivity).reversed())
                 .forEach(a-> System.out.printf("Account %s (%s): activity $%.2f | balance $%.2f%n",
-                        a.getAccountNum(), a.getName(),a.getTransactionsTotal(),a.getBal()));
-    }
-
-
-    private boolean isEnoughFund( String accountNum, double amount){
-        return mapOfAccounts.get(accountNum).getBal()>=amount;
+                        a.getAccountNum(), a.getName(),a.getActivity(),a.getBalance()));
     }
 }
