@@ -1,0 +1,31 @@
+ts_iso,type,account_id,account_name,currency,amount,source_account_id,destination_account_id,note
+2025-10-05T10:00:00,create_account,A001,Aria Ventures,USD,,,,Seed account
+2025-10-05T10:01:00,create_account,A002,Bolt Logistics,USD,,,,Seed account
+2025-10-05T10:02:00,create_account,A003,Cedar Imports,USD,,,,Seed account
+2025-10-05T10:03:00,create_account,A004,Delta Retail,USD,,,,Seed account
+2025-10-05T10:04:00,create_account,A005,Eclipse Media,USD,,,,Seed account
+2025-10-05T10:05:00,create_account,A006,Fjord Tech,USD,,,,Seed account
+2025-10-05T10:06:00,create_account,A007,Garnet Foods,USD,,,,Seed account
+2025-10-05T10:07:00,create_account,A008,Horizon Travel,USD,,,,Seed account
+2025-10-05T10:08:00,create_account,A009,Ion Healthcare,USD,,,,Seed account
+2025-10-05T10:09:00,create_account,A010,Juniper Labs,USD,,,,Seed account
+2025-10-05T10:15:00,deposit,A001,,USD,25000,,,Initial funding
+2025-10-05T10:16:00,deposit,A002,,USD,40000,,,Initial funding
+2025-10-05T10:17:00,deposit,A003,,USD,18000,,,Initial funding
+2025-10-05T10:18:00,deposit,A004,,USD,32000,,,Initial funding
+2025-10-05T10:19:00,deposit,A005,,USD,15000,,,Initial funding
+2025-10-05T10:20:00,deposit,A006,,USD,50000,,,Initial funding
+2025-10-05T10:21:00,deposit,A007,,USD,22000,,,Initial funding
+2025-10-05T10:22:00,deposit,A008,,USD,27000,,,Initial funding
+2025-10-05T10:23:00,deposit,A009,,USD,45000,,,Initial funding
+2025-10-05T10:24:00,deposit,A010,,USD,30000,,,Initial funding
+2025-10-05T10:40:00,transfer,,,USD,12000,A006,A002,Vendor payment / internal xfer
+2025-10-05T10:41:00,transfer,,,USD,8000,A009,A001,Vendor payment / internal xfer
+2025-10-05T10:42:00,transfer,,,USD,5000,A004,A007,Vendor payment / internal xfer
+2025-10-05T10:43:00,transfer,,,USD,7000,A002,A003,Vendor payment / internal xfer
+2025-10-05T10:44:00,transfer,,,USD,4000,A001,A010,Vendor payment / internal xfer
+2025-10-05T10:45:00,transfer,,,USD,6500,A008,A005,Vendor payment / internal xfer
+2025-10-05T10:46:00,transfer,,,USD,3000,A003,A009,Vendor payment / internal xfer
+2025-10-05T10:47:00,transfer,,,USD,4500,A007,A006,Vendor payment / internal xfer
+2025-10-05T10:48:00,transfer,,,USD,5200,A010,A004,Vendor payment / internal xfer
+2025-10-05T10:49:00,transfer,,,USD,2000,A005,A008,Vendor payment / internal xfer
