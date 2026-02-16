@@ -1,6 +1,22 @@
 package arraysandstrings.string;
 
 public class StringToInteger {
+
+    public int myAtoi(String s) {
+        s=s.trim();
+        boolean isNeg = !s.isEmpty() && s.charAt(0)=='-';
+        int start = !s.isEmpty() && (s.charAt(0)=='-' ||s.charAt(0)=='+') ? 1 : 0;
+        long num = 0;
+        for (int idx = start; idx<s.length() && Character.isDigit(s.charAt(idx));idx++){
+            char ch = s.charAt(idx);
+            num = num*10 + ch-'0';
+            if (num>2147483647){
+                return isNeg ? -2147483648 : 2147483647;
+            }
+        }
+
+        return isNeg ?- (int)num : (int)num;
+    }
     public static void main(String[] args) {
         //String str = "    -91283472332";
         String str = "    -42";
@@ -14,22 +30,5 @@ public class StringToInteger {
         System.out.println(Integer.MIN_VALUE);
        // System.out.println(num);
     }
-    public static int myAtoi(String str) {
-        str = str.trim();
-        int isNeg = (!str.isEmpty() && str.charAt(0) == '-') ? -1 : 1;
-        int charToInt = 0;
-        int counter = (!str.isEmpty() && str.charAt(0) != '-' && str.charAt(0) != '+') ? 0 : 1;
-        for(int i = counter; i < str.length(); i++){
-            char ch = str.charAt(i);
-            if((ch-'0') < 0 || (ch-'0') > 9){
-                break;
-            }
-            long temp = ((long)charToInt * 10) + (ch - '0');
-            if(temp < -2147483648 || temp > 2147483647) {
-                return (isNeg < 0) ? -2147483648 : 2147483647;
-            }
-            charToInt = (int)temp;
-        }
-        return charToInt*isNeg;
-    }
+
 }

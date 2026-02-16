@@ -59,6 +59,21 @@ public class AccountsMerge {
                 Arrays.asList("David","David2@m.co","David3@m.co"),
                 Arrays.asList("David","David1@m.co","David2@m.co")
         );
+
+        List<List<String>> accounts3 = List.of(
+                Arrays.asList("Isa","Isa6@m.co","Isa0@m.co","Isa1@m.co","Isa6@m.co","Isa1@m.co"),
+                Arrays.asList("David","David10@m.co","David12@m.co","David7@m.co","David6@m.co","David1@m.co"),
+                Arrays.asList("Alex","Alex1@m.co","Alex7@m.co","Alex6@m.co","Alex11@m.co","Alex2@m.co"),
+                Arrays.asList("Hanzo","Hanzo11@m.co","Hanzo2@m.co","Hanzo5@m.co","Hanzo5@m.co","Hanzo3@m.co"),
+                Arrays.asList("Bob","Bob12@m.co","Bob1@m.co","Bob12@m.co","Bob7@m.co","Bob5@m.co"),
+                Arrays.asList("Isa","Isa4@m.co","Isa1@m.co","Isa3@m.co","Isa9@m.co","Isa2@m.co"),
+                Arrays.asList("Kevin","Kevin0@m.co","Kevin7@m.co","Kevin12@m.co","Kevin3@m.co","Kevin5@m.co"),
+                Arrays.asList("David","David12@m.co","David6@m.co","David10@m.co","David0@m.co","David8@m.co"),
+                Arrays.asList("Celine","Celine0@m.co","Celine8@m.co","Celine10@m.co","Celine2@m.co","Celine12@m.co"),
+                Arrays.asList("Kevin","Kevin1@m.co","Kevin8@m.co","Kevin5@m.co","Kevin9@m.co","Kevin0@m.co"),
+                Arrays.asList("Alex","Alex3@m.co","Alex8@m.co","Alex1@m.co","Alex12@m.co","Alex12@m.co"),
+                Arrays.asList("Kevin","Kevin8@m.co","Kevin12@m.co","Kevin1@m.co","Kevin10@m.co","Kevin9@m.co")
+        );
         accountsMerge(accounts);
 
 
