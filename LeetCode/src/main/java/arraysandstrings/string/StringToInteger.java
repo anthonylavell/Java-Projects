@@ -2,33 +2,33 @@ package arraysandstrings.string;
 
 public class StringToInteger {
 
-    public int myAtoi(String s) {
+    public static int myAtoi(String s) {
         s=s.trim();
-        boolean isNeg = !s.isEmpty() && s.charAt(0)=='-';
-        int start = !s.isEmpty() && (s.charAt(0)=='-' ||s.charAt(0)=='+') ? 1 : 0;
-        long num = 0;
-        for (int idx = start; idx<s.length() && Character.isDigit(s.charAt(idx));idx++){
+        int startIndex =!s.isEmpty()&&(("-+").indexOf(s.charAt(0))>-1)?1:0;
+        int sign = !s.isEmpty()&&(("-").indexOf(s.charAt(0))>-1)?-1:1;
+        long sum = 0;
+        for (int idx = startIndex; idx < s.length(); idx++){
             char ch = s.charAt(idx);
-            num = num*10 + ch-'0';
-            if (num>2147483647){
-                return isNeg ? -2147483648 : 2147483647;
+            if (!Character.isDigit(ch)){
+                break;
+            }
+            sum = (sum*10)+(ch-'0');
+            if (sum >Integer.MAX_VALUE){
+                return sign==-1?Integer.MIN_VALUE : Integer.MAX_VALUE;
             }
         }
-
-        return isNeg ?- (int)num : (int)num;
+        return (int) (sum*sign);
     }
     public static void main(String[] args) {
         //String str = "    -91283472332";
-        String str = "    -42";
+        String s = "    +042";
         //System.out.println(str);
-        str = str.stripLeading();
         //System.out.println(str);
-        char ch = ' ';
-        System.out.println('+'-'0');
+        //System.out.println('+'-'0');
         //int num = myAtoi(str);
-        System.out.println(Integer.MAX_VALUE);
-        System.out.println(Integer.MIN_VALUE);
-       // System.out.println(num);
+        s=s.trim();
+        System.out.println(("-+").indexOf(s.charAt(0)));
+       //System.out.println(myAtoi(s));
     }
 
 }
